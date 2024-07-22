@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Ludotek</title>
+    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/galeria.css">
+    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/header.css">
+    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/loading.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+
+        <div class="container-logo">
+            <div class="logo">
+                <a href="/Proyectos/ludotek/index.html">
+                    <img class="iso" src="/Proyectos/ludotek/isotipo.png" alt="">
+                    <img class="fono" src="/Proyectos/ludotek/logotipo.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="menu-bar">
+            <nav>
+                <ul>
+                    <li><a href="/Proyectos/ludotek/index.html">Inicio</a></li>
+                    <li><a href="/Proyectos/ludotek/paginas/proceso.html">Fases</a>
+                        <ul>
+                            <li><a href="/Proyectos/ludotek/paginas/dispositivo.html">Dispositivo</a></li>
+                            <li><a href="/Proyectos/ludotek/paginas/digitalizacion.html">Digitalización</a></li>
+                            <li><a href="#">Restauración</a></li>
+                            <li><a href="#">Resultados</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/Proyectos/ludotek/paginas/galeria.html">Galeria</a>
+                    </li>
+                    <li><a href="/Proyectos/ludotek/paginas/mapa.html">Mapa</a>
+                    </li>
+                    <li><a href="/Proyectos/ludotek/paginas/equipo.html">Equipo</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <a href="" class="hambur hero__cta">
+
+            <div class="ham ">
+                
+            </div>
+
+        </a>
+
+
+
+    </header>
+
+    <section class="galleryBtn">
+        <div class="infoGallery">
+
+            <p>En esta galeria se hace una compilación de las fotografías provinientes del archivo gráfico de la Ex
+                Editorial Politécnica de la Escuela Superior Politécnica de Chimborazo, las
+                filminas digitalizadas permiten apreciar un antes y un después de la intervención</p>
+        </div>
+        <div class="container">
+            <div class="tabs">
+
+                <input type="radio" id="html" name="fav_language" value="TODAS" checked>
+                <label onclick="verDetalle(1)" for="Todas">TODAS</label>
+
+                <input type="radio" id="css" name="fav_language" value="BAJA">
+                <label onclick="verDetalle(2)" for="baja">BAJA</label>
+
+                <input type="radio" id="javascript" name="fav_language" value="ALTA">
+                <label onclick="verDetalle(3)" for="alta">ALTA</label>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+    <section class="cartas">
+
+
+
+        <div class="gallery">
+
+
+            <div class="flip-card" id="baja">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__01.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+
+                        <img src="/Proyectos/ludotek/img/galeria/_01.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="flip-card" id="baja">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__02.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_02.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flip-card" id="alta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__03.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_03.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flip-card" id="baja">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__04.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_04.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flip-card" id="baja">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__05.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_05.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" id="alta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__06.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_06.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" id="alta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__07.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_07.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" id="baja">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__08.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_08.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__09.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_09.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" id="baja">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__010.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_010.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" id="baja">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__010.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_010.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" id="alta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__010.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_010.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" id="alta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__010.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_01.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/Proyectos/ludotek/img/galeria/__010.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="/Proyectos/ludotek/img/galeria/_010.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agrega más cartas aquí -->
+        </div>
+
+
+    </section>
+
+
+    <section class="anima">
+        <div id="spiral" class="spiral"></div>
+        <div id="spiral2" class="spiral"></div>
+
+    </section>
+    <script>
+
+        let isFirefox = typeof InstallTrigger !== 'undefined';
+        const words = "LUDOTEK";
+
+        let ANGLE = 360;
+        const ANIMATION_DURATION = 4000;
+
+        const animation = () => {
+            ANGLE -= 1; // Incremento do ângulo
+            document.querySelectorAll(".spiral *").forEach((el, i) => {
+
+                const translateY = Math.sin(ANGLE * (Math.PI / 120)) * 100;
+                const scale = Math.cos(ANGLE * (Math.PI / 120)) * 0.5 + 0.5;
+                words.classList.add('spiral');
+
+                const offset = parseInt(el.dataset.offset);
+                const delay = i * (ANIMATION_DURATION / 16) - offset;
+
+                setTimeout(() => {
+                    el.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                }, delay);
+            });
+
+            requestAnimationFrame(animation);
+        };
+
+        const characters = words.split("").forEach((char, i) => {
+            const createElement = (offset) => {
+                const div = document.createElement("div");
+                div.innerText = char;
+                div.classList.add("character");
+                div.setAttribute("data-offset", offset);
+                div.style.animationDelay = `-${i * (ANIMATION_DURATION / 16) - offset}ms`
+                return div;
+            };
+
+            document.querySelector("#spiral").append(createElement(0));
+            document
+                .querySelector("#spiral2")
+                .append(createElement((isFirefox ? 1 : -1) * (ANIMATION_DURATION / 2)));
+        });
+
+
+        // @property CSS doesn't work in Firefox, so it must be animated using JavaScript.
+        if (isFirefox) {
+            animation();
+        }
+
+    </script>
+
+</body>
+
+
+
+
+<script>
+
+    let baja = document.getElementById("baja");
+    let alta = document.getElementById("alta");
+
+    function verDetalle(numeroCard) {
+        switch (numeroCard) {
+            case 1:
+                baja.setAttribute("style", "display: flex");
+                alta.setAttribute("style", "display: flex");
+
+                break;
+            case 2:
+                baja.setAttribute("style", "display: flex");
+
+                alta.setAttribute("style", "display: none");
+                break;
+            case 3:
+                alta.setAttribute("style", "display: flex");
+
+                baja.setAttribute("style", "display: none");
+                break;
+        }
+    }
+</script>
+
+
+<script src="/Proyectos/ludotek/script.js">
+
+</script>
+
+
+
+</html>

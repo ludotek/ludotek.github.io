@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispositivo - Ludotek</title>
+    <link rel="stylesheet" href="dispositivo.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/loading.css">
+    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/footer.css">
+
+
+</head>
+
+<body>
+
+    <header class="header" id="header">
+
+        <div class="container-logo">
+            <div class="logo" id="logo">
+                <a id="navLink" href="/Proyectos/ludotek/index.html">
+                    <img id="iso" class="iso" src="/Proyectos/ludotek/isotipo.png" alt="">
+                    <img id="fono" class="fono" src="/Proyectos/ludotek/logotipo.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="menu-bar">
+            <nav>
+                <ul>
+                    <li><a href="/Proyectos/ludotek/index.html">Inicio</a></li>
+                    <li><a href="/Proyectos/ludotek/paginas/proceso.html">Fases</a>
+                        <ul>
+                            <li><a href="/Proyectos/ludotek/paginas/dispositivo.html">Dispositivo</a></li>
+                            <li><a href="#">Digitalización</a></li>
+                            <li><a href="#">Restauración</a></li>
+                            <li><a href="#">Resultados</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/Proyectos/ludotek/paginas/galeria.html">Galeria</a>
+                    </li>
+                    <li><a href="/Proyectos/ludotek/paginas/mapa.html">Mapa</a>
+                    </li>
+                    <li><a href="/Proyectos/ludotek/paginas/equipo.html">Equipo</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <a href="" class="hambur hero__cta">
+
+            <div class="ham ">
+
+            </div>
+
+        </a>
+
+
+
+    </header>
+
+    <section class="modelado">
+
+
+        <div class="container-modelado">
+            <div class="titulo">
+                <h2>DISPOSITIVO LUMÍNICO PARA DIGITALIZAR</h2>
+
+            </div>
+
+            <div class="container-iframe">
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"></script>
+
+                <spline-viewer url="https://prod.spline.design/nSH4xzPhspggQGEI/scene.splinecode"></spline-viewer>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="info">
+        <div class="container">
+            <div class="image-container">
+                <img src="/Proyectos/ludotek/img/dispo2.jpg" alt="Imagen">
+            </div>
+            <div class="text-container">
+                <h2></h2>
+                <p>Se diseñó y construyó un prototipo digitalizador de imágenes registradas en material fotosensible.
+                    Consta de cinco etapas, donde la etapa de sensado permite conocer la posición en los límites del
+                    espacio de trabajo, en el cual se puede desplazar la diapositiva. La etapa de ingreso y
+                    visualización
+                    de parámetros, la cual, por medio de una pantalla HMI se controla la distancia de enfoque, la
+                    cantidad de luz roja, verde, azul, e intensidad luminosa, además, estos parámetros se pueden
+                    controlar de manera remota con una aplicación móvil.</p>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="image-container">
+                <img src="/Proyectos/ludotek/img/dispo3.JPG" alt="Imagen">
+            </div>
+            <div class="text-container">
+                <h2></h2>
+                <p>. La etapa de procesamiento está constituida
+                    por una ESP32 la misma que se encarga de recibir, procesar e interpretar la información. La etapa
+                    de actuación ejecuta las instrucciones enviadas por la tarjeta de desarrollo, donde los actuadores
+                    están conformados por las luces RGB y motores paso a paso. Finalmente, la etapa de adquisición
+                    de imágenes consiste en que la cámara que se integre al prototipo permita la captura de la imagen
+                    registrada en el material fotosensible, obteniendo de este proceso la imagen digitalizada. </p>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="image-container">
+                <img src="/Proyectos/ludotek/img/dispo4.png" alt="Imagen">
+            </div>
+            <div class="text-container">
+                <h2></h2>
+                <p>De las pruebas realizadas a las luces RGB, se determinó que el coeficiente de variación mayor es de
+                    5,96%, estableciéndose que existe estabilidad de color. En las pruebas de error que presentan los
+                    motores paso a paso se determinó, que el rango de error de distancia que se puede presentar en el
+                    prototipo varía desde 0,10mm hasta 0,50mm. En base a las valoraciones realizadas por el grupo
+                    de expertos, se estableció que las fotografías obtenidas por el prototipo tienen un promedio de
+                    aceptación de 4,7 sobre 5.</p>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="image-container">
+                <img src="/Proyectos/ludotek/img/dispo5.jpg" alt="Imagen">
+            </div>
+            <div class="text-container">
+                <h2></h2>
+                <p> De lo analizado se concluye que del prototipo desarrollado se obtienen
+                    mejores fotografías que con equipos comerciales similares. Se recomienda incorporar un sensor
+                    de alta resolución en megapíxeles al prototipo, con el propósito de habilitar un control automático
+                    ejecutado por el dispositivo.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="anima">
+        <div id="spiral" class="spiral"></div>
+        <div id="spiral2" class="spiral"></div>
+
+    </section>
+    <script>
+
+        let isFirefox = typeof InstallTrigger !== 'undefined';
+        const words = "LUDOTEK";
+
+        let ANGLE = 360;
+        const ANIMATION_DURATION = 4000;
+
+        const animation = () => {
+            ANGLE -= 1; // Incremento do ângulo
+            document.querySelectorAll(".spiral *").forEach((el, i) => {
+
+                const translateY = Math.sin(ANGLE * (Math.PI / 120)) * 100;
+                const scale = Math.cos(ANGLE * (Math.PI / 120)) * 0.5 + 0.5;
+                words.classList.add('spiral');
+
+                const offset = parseInt(el.dataset.offset);
+                const delay = i * (ANIMATION_DURATION / 16) - offset;
+
+                setTimeout(() => {
+                    el.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                }, delay);
+            });
+
+            requestAnimationFrame(animation);
+        };
+
+        const characters = words.split("").forEach((char, i) => {
+            const createElement = (offset) => {
+                const div = document.createElement("div");
+                div.innerText = char;
+                div.classList.add("character");
+                div.setAttribute("data-offset", offset);
+                div.style.animationDelay = `-${i * (ANIMATION_DURATION / 16) - offset}ms`
+                return div;
+            };
+
+            document.querySelector("#spiral").append(createElement(0));
+            document
+                .querySelector("#spiral2")
+                .append(createElement((isFirefox ? 1 : -1) * (ANIMATION_DURATION / 2)));
+        });
+
+
+        // @property CSS doesn't work in Firefox, so it must be animated using JavaScript.
+        if (isFirefox) {
+            animation();
+        }
+
+    </script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Nuestro Equipo</h3>
+                <p>Somos un grupo de investigadores multidisciplinario</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="/Proyectos/ludotek/index.html">Inicio</a></li>
+                    <li><a href="/Proyectos/ludotek/paginas/proceso.html">Fases</a></li>
+                    <li><a href="/Proyectos/ludotek/paginas/equipo.html">Equipo</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contáctanos</h3>
+                <p>Correo: digitalización.fotografias@espoch.edu.ec</p>
+                <p>Celular: 0991194932</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="/Proyectos/ludotek/script.js">
+
+    </script>
+</body>
+
+</html>

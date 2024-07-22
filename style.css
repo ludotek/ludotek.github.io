@@ -1,0 +1,658 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+}
+
+#anim{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: 'Ludotek';
+    src: url(/Proyectos/ludotek/LUDETEK\ MAYUS.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'sourceSansProLight';
+    src: url(/Proyectos/ludotek/SourceSansPro-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProRegular';
+    src: url(/Proyectos/ludotek/SourceSansPro-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'sourceSansProBold';
+    src: url(/Proyectos/ludotek/SourceSansPro-Bold.ttf) format('truetype');
+}
+
+
+
+body {
+    display: block;
+    margin:0 ;
+    height: 100vh;
+    background-color: #1C3C6D;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+p {
+    font-size: 16px;
+    font-family: "sourceSansProRegular";
+
+}
+
+section.video{
+    background-color: white;
+}
+
+
+
+/*SECCION PORTADA*/
+
+
+.portada {
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 0px;
+    background-color: #162641;
+
+}
+
+.slider-frame {
+    background-color: #162641;
+    width: 100%;
+    height: 100vh;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: slide 20s infinite alternate ease-in-out;
+}
+/*
+.slider-frame::before {
+    content: '';
+    bottom: 0;
+    width: 100%;
+    height: 150vh;
+    background: linear-gradient(to top, #000000, transparent);
+    z-index: 10000;
+    display: flex;
+    position: absolute;
+}
+*/
+
+.slider-frame li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider-frame img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.1);
+    z-index: 100;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+
+
+
+
+
+
+
+
+section.video {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+
+
+
+
+
+/*SECCION DE ANIMACION PORTADA*/
+/*Animación de cuadrados
+
+section.animacion {
+    background-color: #c48a3f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    margin-bottom: 40px;
+    scale: 0.3;
+    margin-top: 50px;
+    z-index: 3;
+}
+
+.cuadrados {
+    top: 30px;
+    background-color: #ffcd3600;
+    width: 60%;
+    height: 80%;
+    display: flex;
+    margin: 25px;
+    justify-content: center;
+    scale: 0.3;
+
+}
+
+section.animacion .cuadrados .cuadrado {
+    display: flex;
+    margin: 10px;
+    padding: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: #1C3C6D;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 2px;
+    text-align: start;
+
+    animation: animaCuadrados 0.5s forwards;
+    animation-delay: 0s;
+
+}
+
+section.animacion .cuadrados .cua1 {
+    animation: animaCua1 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+section.animacion .cuadrados .cua2 {
+    animation: animaCua2 0.5s forwards;
+    animation-delay: 1s;
+}
+
+section.animacion .cuadrados .cua3 {
+    animation: animaCua3 0.5s forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes animaCuadrados {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+@keyframes animaCua1 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+
+    }
+
+    100% {
+        transform: translate(-150px, 350px) rotate(45deg);
+
+    }
+}
+
+@keyframes animaCua2 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+
+    }
+
+    100% {
+        transform: translate(-150px, 175px) rotate(45deg);
+    }
+}
+
+@keyframes animaCua3 {
+    0% {
+        transform: rotate(0deg);
+
+    }
+
+    100% {
+        transform: translate(-150px, 10px) rotate(45deg);
+    }
+}
+
+section.animacion .cuadrados h2 {
+    text-align: left;
+    display: flex;
+    animation: titulo 1.5s forwards;
+    animation-delay: 2s;
+    transform: rotate(-45deg);
+    z-index: 2;
+    opacity: 0;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@keyframes titulo {
+    0% {
+        transform: translate(0px, 0px) rotate(-45deg);
+        opacity: 0;
+
+    }
+
+    20% {
+        transform: rotate(-45deg);
+        opacity: 1;
+
+    }
+
+    40% {
+        opacity: 1;
+
+    }
+
+    100% {
+        transform: translate(250px, 0px) rotate(-45deg);
+        opacity: 1;
+
+    }
+
+}
+
+*/
+
+
+
+
+
+
+
+
+
+/*
+
+SECCION INFORMACION INICIO
+
+*/
+section.info {
+    display: block;
+    height: auto;
+    padding: 50px 0;
+}
+
+section.info .container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.2s;
+}
+
+section.info .container .cont {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+section.info .container .cont .contImg {
+    width: 50%;
+    display: flex;
+    height: 850px;
+    transition: 0.2s;
+
+}
+
+section.info .container .cont .contImg img.film {
+    display: flex;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 900px;
+    border-radius: 50px;
+    transition: 0.2s;
+
+}
+
+
+
+section.info .container .contImg img:nth-child(1) {
+    scale: 1.2;
+    transform: translateX(75%);
+    box-shadow: 0px 8px 16px rgb(0, 0, 0);
+
+}
+
+section.info .container .contImg:hover img:nth-child(1) {
+    transform: translateX(-50px) rotate(10deg);
+}
+
+section.info .container .contImg img:nth-child(2) {
+    scale: 1.8;
+    z-index: 1;
+    box-shadow: 0px 8px 16px rgb(0, 0, 0);
+
+}
+
+section.info .container .contImg img:nth-child(2):hover {
+    scale: 2;
+}
+
+
+section.info .container .contImg img:nth-child(3) {
+    scale: 1.2;
+    transform: translateX(-75%);
+    box-shadow: 0px 8px 16px rgb(0, 0, 0);
+
+}
+
+section.info .container .contImg:hover img:nth-child(3) {
+    transform: translateX(50px) rotate(-20deg);
+}
+
+
+
+
+section.info .container .contInfo {
+    margin: 10px 25px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    display: block;
+    height: 400px;
+    background-color: #ffffff !important;
+    border-radius: 40px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    transition: 0.2s;
+    box-shadow: inset 5px 5px 5px rgb(0, 0, 0);
+    text-align: justify;
+}
+
+section.info .container .contInfo h2 {
+    margin-top: 20px;
+    font-family: "Ludotek";
+    padding: 10px;
+    font-size: 25px;
+
+}
+
+
+
+section.info .c-info {}
+
+
+.equipo-link {
+    font-size: 20px;
+    color: white;
+    background-color: #C48B3F;
+    padding: 20px 30px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 20%;
+    display: flex;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0px 8px 16px rgb(0, 0, 0);
+
+}
+
+.equipo-link:hover {
+    background-color: #1C3C6D;
+    color: rgb(255, 255, 255);
+    border-color: #1C3C6D solid 5px !important;
+}
+
+
+
+
+/* FIN */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+FOOTER
+
+*/
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 600px) {
+    header .fono {
+        display: none;
+    }
+
+    .cuadrados {
+        width: 500px;
+    }
+
+    section.info .container .contInfo {
+        height: 600px;
+    }
+    section.info {
+        padding-bottom: 50px;
+    }
+
+    section.info .container .contImg {
+        padding-bottom: 10px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 900px) {
+    .menu-bar {
+        display: none;
+    }
+
+    .cuadrados {
+        width: 500px;
+        scale: 0.5;
+    }
+
+    a.hambur {
+        display: flex;
+    }
+
+    .menu-bar {}
+
+    section.info .container {
+        display: block;
+    }
+
+    section.info {
+        margin-top: -500px;
+        margin-bottom: 0px;
+
+    }
+
+    section.info .container .contImg {
+        margin-top: 10px;
+        height: 500px;
+
+    }
+
+    section.info .container .contInfo {
+        height: 450px;
+        top: -100px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+.modal {
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1111114c;
+    display: none;
+    pointer-events: none;
+    z-index: 100;
+}
+
+
+.modal__container {
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    background-color: #eaf1e5;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 6px;
+    top: 0;
+    display: grid;
+    gap: 0.2em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    position: relative;
+
+}
+
+.img-info{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #cd1515;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cecece;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal--show {
+    transition: .4s all;
+    opacity: 1;
+    pointer-events: unset;
+    transform: scale(1);
+    overflow: scroll;
+
+}
+
+.modal__close {
+    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0);
+    transition: .5s all;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    background-color: #ffce36;
+    padding: 1px 10px;
+    border-radius: 5px;
+    color: black;
+
+}
