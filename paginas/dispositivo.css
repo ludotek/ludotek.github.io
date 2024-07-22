@@ -1,13 +1,59 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: 'ludotek';
+    src: url(/tipografias/LUDETEK\ MAYUS.otf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProLight';
+    src: url(/tipografias/SourceSansPro-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProRegular';
+    src: url(/tipografias/SourceSansPro-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProBold';
+    src: url(/tipografias/SourceSansPro-Bold.ttf) format('truetype');
+}
+:root {
+    --color-blue: #003973;
+    --color-dorado: #C7893E;
+}
+h1{
+    font-family: "sourceSansProBold";
+}
+h2{
+    font-family: 'ludotek';
+    color: var(--color-blue);
+    text-align: center;
+    line-height: 35px;
+}
+h3 {
+    font-family: "sourceSansProRegular";
+}
+h4 {
+    font-family: "sourceSansProRegular";
+}
+p {
+    color: #333;
+    font-size: 16px;
+    font-family: "sourceSansProRegular";
 }
 
-@font-face {
-    font-family: 'Ludotek';
-    src: url(/Proyectos/ludotek/LUDETEK\ MAYUS.otf) format('truetype');
-}
+
+
+
+
+
+
+
+
+
+
+
 
 body {
     display: block;
@@ -15,12 +61,9 @@ body {
     background-color: white;
 }
 
-p {
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 
 h2 {
-    font-family: 'Ludotek';
     margin: 20px;
     display: flex;
     justify-content: center;
@@ -31,10 +74,9 @@ h2 {
 section.modelado {
     display: block;
     width: 100%;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-    padding-top: 120px;
+    padding-top: 50px;
 }
 
 .container-modelado {
@@ -46,12 +88,15 @@ section.modelado {
     justify-content: center;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
 }
 
 
-spline-viewer {
+.container-iframe spline-viewer {
     display: flex;
-    width: 70%;
+    width: 80%;
     height: 500px;
     transition: 0.2s;
 
@@ -78,7 +123,6 @@ spline-viewer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 10px;
 }
 
 .container:nth-child(even){
@@ -101,21 +145,38 @@ spline-viewer {
 }
 
 .text-container {
+    display: block;
     width: 50%;
-    height: 100%;
-    background-color: #003973;
-    border-radius: 30px;
-    padding: 20px;
+    padding: 10px;
     text-align: justify;
-    color: white;
+    align-items: center;
+    justify-content: center;
 }
 
-.text-container h2 {
-    margin-top: 0;
+.text-container p{
+    font-family: "sourceSansProRegular";
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #333;
+    padding: 25px;
 }
+
+
+
+
+
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+
+@media only screen and (max-width: 700px) {
+    spline-viewer {
+        transition: 0.2s;
+        display: flex;
+        width: 100%;
+        margin: 0;
+    }
     .container {
         flex-direction: column;
 
@@ -135,35 +196,10 @@ spline-viewer {
     }
 }
 
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 700px) {
-    spline-viewer {
-        transition: 0.2s;
-        display: flex;
-        width: 100%;
-        height: 500px;
-        margin: 0;
-    }
-
-
-}
-
 @media only screen and (max-width: 900px) {
     spline-viewer {
         display: flex;
         width: 100%;
-        height: 500px;
-        padding-bottom: 400px;
-
+        padding-bottom: 50px;
     }
-
-
 }
