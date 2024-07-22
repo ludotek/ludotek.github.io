@@ -2,14 +2,14 @@
 /*SECCION ANIMADA DE ESPIRAL*/
 
 section.anima {
-    height: 35%;
+    height: 40%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #003973;
     overflow: hidden;
-    font-size: 62.5%
+    font-size: 50%
 }
 
 /* The @property CSS at-rule is part of the CSS Houdini umbrella of APIs. It */
@@ -27,7 +27,7 @@ section.anima {
 .spiral {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     position: absolute;
     color: #e0ecef;
 }
@@ -45,7 +45,7 @@ section.anima {
 .character {
     font-family: 'Ludotek';
 
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #C7893E;
     text-transform: uppercase;
     transform: translateY(calc(sin(var(--angle)) * 100px)) scale(calc(cos(var(--angle)) * 0.5 + 0.5));
@@ -54,7 +54,7 @@ section.anima {
 
 @media (max-width: 490px) {
     .character {
-        font-size: 1.2rem
+        font-size: 1rem
     }
 }
 
