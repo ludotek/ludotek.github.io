@@ -1,8 +1,58 @@
 /* Estilos generales del footer */
+
+@font-face {
+    font-family: 'ludotek';
+    src: url(/tipografias/LUDETEK\ MAYUS.otf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProLight';
+    src: url(/tipografias/SourceSansPro-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProRegular';
+    src: url(/tipografias/SourceSansPro-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProBold';
+    src: url(/tipografias/SourceSansPro-Bold.ttf) format('truetype');
+}
+:root {
+    --color-blue: #003973;
+    --color-dorado: #C7893E;
+}
+h1{
+    font-family: "sourceSansProBold";
+}
+h2{
+    
+}
+footer h3,p {
+    font-family: "sourceSansProRegular";
+    color: #fff;
+}
+h4 {
+    font-family: "sourceSansProRegular";
+}
+p {
+    font-size: 16px;
+    font-family: "sourceSansProRegular";
+}
+
+
+
+
+
+
+
+
+
+
+
 .footer {
     background-color: #003973;
     color: #fff;
     padding: 40px 20px;
+    display: block;
 }
 
 .footer-container {
@@ -14,6 +64,7 @@
 }
 
 .footer-section {
+    display: block;
     justify-content: center;
     align-items: center;
     text-justify: center;
@@ -29,6 +80,9 @@
 .footer-section ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
 }
 
 .footer-section ul li {
@@ -38,6 +92,18 @@
 .footer-section ul li a {
     color: #fff;
     text-decoration: none;
+    font-family: "sourceSansProregular";
+}
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "sourceSansProregular";
+    display: flex;
+    justify-content: center;
+}
+
+.footer-section a img{
+    width: 30px;
 }
 
 .footer-section ul li a:hover {
@@ -57,6 +123,11 @@
         align-items: center;
     }
 
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+}
     .footer-section {
         width: 100%;
         text-align: center;
