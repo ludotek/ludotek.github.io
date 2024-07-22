@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria - Ludotek</title>
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/galeria.css">
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/header.css">
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/loading.css">
+
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/paginas/galeria.css">
+
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/loading.css">
 </head>
 
 <body>
@@ -15,10 +20,10 @@
     <header class="header" id="header">
 
         <div class="container-logo">
-            <div class="logo">
-                <a href="/Proyectos/ludotek/index.html">
-                    <img class="iso" src="/Proyectos/ludotek/isotipo.png" alt="">
-                    <img class="fono" src="/Proyectos/ludotek/logotipo.png" alt="">
+            <div class="logo" id="logo">
+                <a id="navLink" href="/index.html">
+                    <img class="iso" src="/img/isotipo.png" alt="">
+                    <img class="fono" src="/img/logotipo.png" alt="">
                 </a>
             </div>
         </div>
@@ -26,46 +31,59 @@
         <div class="menu-bar">
             <nav>
                 <ul>
-                    <li><a href="/Proyectos/ludotek/index.html">Inicio</a></li>
-                    <li><a href="/Proyectos/ludotek/paginas/proceso.html">Fases</a>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/paginas/proceso.html">Fases</a>
                         <ul>
-                            <li><a href="/Proyectos/ludotek/paginas/dispositivo.html">Dispositivo</a></li>
-                            <li><a href="/Proyectos/ludotek/paginas/digitalizacion.html">Digitalización</a></li>
+                            <li><a href="/paginas/dispositivo.html">Dispositivo</a></li>
+                            <li><a href="/paginas/digitalizacion.html">Digitalización</a></li>
                             <li><a href="#">Restauración</a></li>
                             <li><a href="#">Resultados</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="/Proyectos/ludotek/paginas/galeria.html">Galeria</a>
+                    <li><a href="/paginas/galeria.html">Galeria</a>
                     </li>
-                    <li><a href="/Proyectos/ludotek/paginas/mapa.html">Mapa</a>
+                    <li><a href="/paginas/mapa.html">Mapa</a>
                     </li>
-                    <li><a href="/Proyectos/ludotek/paginas/equipo.html">Equipo</a>
+                    <li><a href="/paginas/equipo.html">Equipo</a>
                     </li>
                 </ul>
             </nav>
         </div>
 
 
-        <a href="" class="hambur hero__cta">
-
+        <button id="hambur" onclick="verDetalle(5)">
             <div class="ham ">
-                
-            </div>
 
-        </a>
+            </div>
+        </button>
+
 
 
 
     </header>
 
-    <section class="galleryBtn">
-        <div class="infoGallery">
-
+    <section class="galeria">
+        <div class="row">
+            <h2>GALERÍA</h2>
+            <p>El proyecto ludotek está conformado por un equipo multidisciplinario de investigadores de las carreras
+                de: Electrónica y Automatización, Diseño Gráfico, Software y Diseño Industrial.</p>
+            <br>
             <p>En esta galeria se hace una compilación de las fotografías provinientes del archivo gráfico de la Ex
                 Editorial Politécnica de la Escuela Superior Politécnica de Chimborazo, las
                 filminas digitalizadas permiten apreciar un antes y un después de la intervención</p>
         </div>
+
+
+
+
+
+    </section>
+    <!--
+    <section class="galleryBtn">
+        <div class="infoGallery">
+        </div>
+        
         <div class="container">
             <div class="tabs">
 
@@ -84,8 +102,157 @@
 
     </section>
 
+-->
 
 
+    <section class="galeriaNueva">
+        <main class="hero portfolio3D" id="heroMain">
+
+            <section class="hero-portfolio">
+
+                <article class="hero-portfolio--grid">
+                    <a href="javascript:void(0)" class="hero-portfolio--grid-item c-card">
+                        <img class="c-card--image" src="/filminas/_01.png" alt="">
+
+                        <span class="c-card--name">nombre</span>
+                    </a>
+                    <a href="javascript:void(0)" class="hero-portfolio--grid-item c-card">
+                        <img class="c-card--image" src="/filminas/_02.png" alt="">
+                        <span class="c-card--name">nombre</span>
+                    </a>
+                    <a href="javascript:void(0)" class="hero-portfolio--grid-item c-card">
+                        <img class="c-card--image" src="/filminas/_03.png" alt="">
+                        <span class="c-card--name">nombre</span>
+                    </a>
+                    <a href="javascript:void(0)" class="hero-portfolio--grid-item c-card">
+                        <img class="c-card--image" src="/filminas/_04.png" alt="">
+                        <span class="c-card--name">nombre</span>
+                    </a>
+                    <a href="javascript:void(0)" class="hero-portfolio--grid-item c-card">
+                        <img class="c-card--image" src="/filminas/_05.png" alt="">
+                        <span class="c-card--name">nombre</span>
+                    </a>
+                    <a href="javascript:void(0)" class="hero-portfolio--grid-item c-card">
+                        <img class="c-card--image" src="/filminas/_06.png" alt="">
+                        <span class="c-card--name">nombre</span>
+                    </a>
+                    <a href="javascript:void(0)" class="hero-portfolio--grid-item c-card">
+                        <img class="c-card--image" src="/filminas/_07.png" alt="">
+                        <span class="c-card--name">nombre</span>
+                    </a>
+                    <a href="javascript:void(0)" class="hero-portfolio--grid-item c-card">
+                        <img class="c-card--image" src="/filminas/_08.png" alt="">
+                        <span class="c-card--name">nombre</span>
+                    </a>
+                    <a href="javascript:void(0)" class="hero-portfolio--grid-item c-card">
+                        <img class="c-card--image" src="/filminas/_09.png" alt="">
+                        <span class="c-card--name">nombre</span>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </section>
+    <script>
+        const addAttributes = (element, attrObj) => {
+            for (let attr in attrObj) {
+                if (attrObj.hasOwnProperty(attr)) element.setAttribute(attr, attrObj[attr])
+            }
+        };
+        const removeAttr = (el, attr) => {
+            if (el.hasAttribute(attr)) el.removeAttribute(attr)
+        };
+        // Crear elementos con atributos e hijo
+        const createCustomElement = (element, attributes, children) => {
+            let customElement = document.createElement(element);
+            if (children !== undefined) children.forEach(el => {
+                if (el.nodeType) {
+                    if (el.nodeType === 1 || el.nodeType === 11) customElement.appendChild(el);
+                } else {
+                    customElement.innerHTML += el;
+                }
+            });
+            addAttributes(customElement, attributes);
+            return customElement;
+        };
+        // Imprimir modal
+        const printModal = content => {
+            // crear contenedor interno
+            const modalContentEl = createCustomElement('div', {
+                id: 'ed-modal-content',
+                class: 'ed-modal-content'
+            }, [content]),
+
+                // crear contenedor principal
+                modalContainerEl = createCustomElement('div', {
+                    id: 'ed-modal-container',
+                    class: 'ed-modal-container'
+                }, [modalContentEl]);
+
+            let modalId = modalContainerEl.attributes.id.value;
+            let FatherDOM = document.getElementById('heroMain');
+
+            // Imprimir el modal
+            FatherDOM.appendChild(modalContainerEl);
+            // Agregar clase para animar elemento
+            setTimeout(function () {
+                document.getElementById(modalId).classList.add('is-active');
+            }, 10);
+
+            // Remover el modal
+            const removeModal = () => {
+                // Remover Clase de animación el modal
+                document.getElementById(modalId).classList.remove('is-active');
+                document.getElementById(modalId).classList.add('is-remove');
+
+                setTimeout(function () {
+                    FatherDOM.removeChild(modalContainerEl)
+                }, 330);
+            };
+
+            modalContainerEl.addEventListener('click', e => {
+                if (e.target === modalContainerEl) removeModal();
+                else {
+                    //console.log(e.target)
+                }
+            })
+        }
+            // ^\.(_)?[a-z]+-[a-z0-9-]+((_{2}|-{2})?[a-z0-9-]+)?(-{2}[a-z0-9-]+)?[a-z0-9]$
+            ;[...document.querySelectorAll('.c-card')].forEach((a, i) => {
+                a.addEventListener('mouseover', (e) => {
+                    [...document.querySelectorAll('.c-card')].map(e => {
+                        if (!e.classList.contains('is-focus')) {
+                            e.classList.add('no-focus')
+                        }
+                    });
+                    document.querySelector('.hero-portfolio--grid').classList.add('is-focus')
+                    a.classList.remove('no-focus')
+                    a.classList.add('is-focus')
+                    addAttributes(a, { id: 'show-modal' })
+                });
+                a.addEventListener('mouseleave', (e) => {
+                    [...document.querySelectorAll('.c-card')].map(e => {
+                        if (e.classList.contains('no-focus')) {
+                            e.classList.remove('no-focus')
+                        }
+                    });
+                    a.classList.remove('is-focus')
+                    removeAttr(a, 'id')
+                });
+                a.addEventListener('click', (e) => {
+                    let srcIMg = a.firstElementChild.src;
+                    printModal(`
+            <dialog class="ed-modal-content--section" open>
+                <img class="ed-modal-content--image" src="${srcIMg}" alt=""/>
+                <a >ir a juego</a>
+            </dialog>
+        `)
+                });
+            });
+    </script>
+
+
+    <!--
 
     <section class="cartas">
 
@@ -254,18 +421,19 @@
                 </div>
             </div>
 
-            <!-- Agrega más cartas aquí -->
         </div>
 
 
     </section>
 
-
+  
     <section class="anima">
         <div id="spiral" class="spiral"></div>
         <div id="spiral2" class="spiral"></div>
 
     </section>
+
+    
     <script>
 
         let isFirefox = typeof InstallTrigger !== 'undefined';
@@ -317,42 +485,67 @@
 
     </script>
 
-</body>
+    -->
 
+    <script>
 
+        let baja = document.getElementById("baja");
+        let alta = document.getElementById("alta");
 
+        function verDetalle(numeroCard) {
+            switch (numeroCard) {
+                case 1:
+                    baja.setAttribute("style", "display: flex");
+                    alta.setAttribute("style", "display: flex");
 
-<script>
+                    break;
+                case 2:
+                    baja.setAttribute("style", "display: flex");
 
-    let baja = document.getElementById("baja");
-    let alta = document.getElementById("alta");
+                    alta.setAttribute("style", "display: none");
+                    break;
+                case 3:
+                    alta.setAttribute("style", "display: flex");
 
-    function verDetalle(numeroCard) {
-        switch (numeroCard) {
-            case 1:
-                baja.setAttribute("style", "display: flex");
-                alta.setAttribute("style", "display: flex");
-
-                break;
-            case 2:
-                baja.setAttribute("style", "display: flex");
-
-                alta.setAttribute("style", "display: none");
-                break;
-            case 3:
-                alta.setAttribute("style", "display: flex");
-
-                baja.setAttribute("style", "display: none");
-                break;
+                    baja.setAttribute("style", "display: none");
+                    break;
+            }
         }
-    }
-</script>
+    </script>
 
 
-<script src="/Proyectos/ludotek/script.js">
 
-</script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Nuestro Equipo</h3>
+                <p>Somos un grupo de investigadores multidisciplinario</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/paginas/proceso.html">Fases</a></li>
+                    <li><a href="/paginas/galeria.html">Galeria</a></li>
+                    <li><a href="/paginas/mapa.html">Mapa</a></li>
+                    <li><a href="/paginas/equipo.html">Equipo</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contáctanos</h3>
+                <p>digitalización.fotografias@espoch.edu.ec</p>
+                <p>Celular: 0991194932</p> <br>
+                <a href="https://www.facebook.com/profile.php?id=61554102338423">Facebook</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
+    <script src="/script.js"></script>
+
+</body>
 
 
 </html>
