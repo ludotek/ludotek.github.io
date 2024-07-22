@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipo</title>
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/equipo.css">
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/header.css">
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/loading.css">
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/footer.css">
+
+    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/paginas/equipo.css">
+
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/loading.css">
 
 
 </head>
@@ -18,10 +22,10 @@
     <header class="header" id="header">
 
         <div class="container-logo">
-            <div class="logo">
-                <a href="/Proyectos/ludotek/index.html">
-                    <img class="iso" src="/Proyectos/ludotek/isotipo.png" alt="">
-                    <img class="fono" src="/Proyectos/ludotek/logotipo.png" alt="">
+            <div class="logo" id="logo">
+                <a id="navLink" href="/index.html">
+                    <img class="iso" src="/img/isotipo.png" alt="">
+                    <img class="fono" src="/img/logotipo.png" alt="">
                 </a>
             </div>
         </div>
@@ -29,34 +33,33 @@
         <div class="menu-bar">
             <nav>
                 <ul>
-                    <li><a href="/Proyectos/ludotek/index.html">Inicio</a></li>
-                    <li><a href="/Proyectos/ludotek/paginas/proceso.html">Fases</a>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/paginas/proceso.html">Fases</a>
                         <ul>
-                            <li><a href="/Proyectos/ludotek/paginas/dispositivo.html">Dispositivo</a></li>
-                            <li><a href="/Proyectos/ludotek/paginas/digitalizacion.html">Digitalización</a></li>
+                            <li><a href="/paginas/dispositivo.html">Dispositivo</a></li>
+                            <li><a href="/paginas/digitalizacion.html">Digitalización</a></li>
                             <li><a href="#">Restauración</a></li>
                             <li><a href="#">Resultados</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="/Proyectos/ludotek/paginas/galeria.html">Galeria</a>
+                    <li><a href="/paginas/galeria.html">Galeria</a>
                     </li>
-                    <li><a href="/Proyectos/ludotek/paginas/mapa.html">Mapa</a>
+                    <li><a href="/paginas/mapa.html">Mapa</a>
                     </li>
-                    <li><a href="/Proyectos/ludotek/paginas/equipo.html">Equipo</a>
+                    <li><a href="/paginas/equipo.html">Equipo</a>
                     </li>
                 </ul>
             </nav>
         </div>
 
 
-        <a href="" class="hambur hero__cta">
-
+        <button id="hambur" onclick="verDetalle(5)">
             <div class="ham ">
-                
-            </div>
 
-        </a>
+            </div>
+        </button>
+
 
 
 
@@ -65,7 +68,7 @@
 
     <section class="equipo">
         <div class="row">
-            <h2>EQUIPO</h2>
+            <h2>EQUIPO</h2> <br>
             <p>El proyecto ludotek está conformado por un equipo multidisciplinario de investigadores de las carreras
                 de: Electrónica y Automatización, Diseño Gráfico, Software y Diseño Industrial.</p>
             <p>Nuestro objetivo es preservar las fotografías contenidas en diapositivas pertenecientes a la desaparecida
@@ -83,7 +86,7 @@
     <section class="team">
         <div class="team-card">
             <div class="team-card-image">
-                <img src="/Proyectos/ludotek/img/JOSE_GUERRA.png" alt="Integrante 1">
+                <img src="/img/JOSE_GUERRA2.png" alt="Integrante 1">
             </div>
             <div class="team-card-info">
                 <h3>Ing. José Enrique Guerra Salazar</h3>
@@ -95,7 +98,7 @@
 
         <div class="team-card">
             <div class="team-card-image">
-                <img src="/Proyectos/ludotek/img/EDISON_MARTINEZ.png" alt="Integrante 1">
+                <img src="/img/EDISON_MARTINEZ2.png" alt="Integrante 1">
             </div>
             <div class="team-card-info">
                 <h3>Lcdo. Edison Fernando Martínez Espinoza</h3>
@@ -107,7 +110,7 @@
 
         <div class="team-card">
             <div class="team-card-image">
-                <img src="/Proyectos/ludotek/img/byron.jpeg" alt="Integrante 1">
+                <img src="/img/byron2.png" alt="Integrante 1">
             </div>
             <div class="team-card-info">
                 <h3>Ing. Byron Ernesto Vaca Barahona</h3>
@@ -120,7 +123,7 @@
 
         <div class="team-card">
             <div class="team-card-image">
-                <img src="/Proyectos/ludotek/img/RUTH_BARBA.png" alt="Integrante 1">
+                <img src="/img/RUTH_BARBA2.png" alt="Integrante 1">
             </div>
             <div class="team-card-info">
                 <h3>Ing. Ruth Genoveva Barba Vera</h3>
@@ -133,7 +136,7 @@
 
         <div class="team-card">
             <div class="team-card-image">
-                <img src="/Proyectos/ludotek/img/ISABEL_CARRION.png" alt="Integrante 1">
+                <img src="/img/ISABEL_CARRION2.png" alt="Integrante 1">
             </div>
             <div class="team-card-info">
                 <h3>Ing. María Isabel Carrión Escobar</h3>
@@ -146,7 +149,7 @@
 
         <div class="team-card">
             <div class="team-card-image">
-                <img src="/Proyectos/ludotek/img/niki.jpeg" alt="Integrante 1">
+                <img src="/img/niki2.png" alt="Integrante 1">
             </div>
             <div class="team-card-info">
                 <h3>Niki</h3>
@@ -252,15 +255,18 @@
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="/Proyectos/ludotek/index.html">Inicio</a></li>
-                    <li><a href="/Proyectos/ludotek/paginas/proceso.html">Fases</a></li>
-                    <li><a href="/Proyectos/ludotek/paginas/equipo.html">Equipo</a></li>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/paginas/proceso.html">Fases</a></li>
+                    <li><a href="/paginas/galeria.html">Galeria</a></li>
+                    <li><a href="/paginas/mapa.html">Mapa</a></li>
+                    <li><a href="/paginas/equipo.html">Equipo</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Contáctanos</h3>
-                <p>Correo: digitalización.fotografias@espoch.edu.ec</p>
-                <p>Celular: 0991194932</p>
+                <p>digitalización.fotografias@espoch.edu.ec</p>
+                <p>Celular: 0991194932</p> <br>
+                <a href="https://www.facebook.com/profile.php?id=61554102338423">Facebook</a>
             </div>
         </div>
         <div class="footer-bottom">
