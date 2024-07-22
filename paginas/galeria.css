@@ -1,42 +1,44 @@
-* {
-    padding: 0px;
-    margin: 0px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
 
 @font-face {
-    font-family: 'Ludotek';
-    src: url(/Proyectos/ludotek/LUDETEK\ MAYUS.otf) format('truetype');
+    font-family: 'ludotek';
+    src: url(/tipografias/LUDETEK\ MAYUS.otf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProLight';
+    src: url(/tipografias/SourceSansPro-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProRegular';
+    src: url(/tipografias/SourceSansPro-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProBold';
+    src: url(/tipografias/SourceSansPro-Bold.ttf) format('truetype');
+}
+:root {
+    --color-blue: #003973;
+    --color-dorado: #C7893E;
+}
+h1{
+    font-family: "sourceSansProBold";
+}
+h2{
+    
+}
+h3 {
+    font-family: "sourceSansProRegular";
+}
+h4 {
+    font-family: "sourceSansProRegular";
+}
+p {
+    font-size: 16px;
+    font-family: "sourceSansProRegular";
 }
 
-body {
-    display: block;
-    height: 100vh;
 
-}
-
-p,
-a {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h2 {
-    font-family: 'Ludotek';
-    margin: 20px;
-}
-
-
-section.galleryBtn {
-    padding-top: 150px;
-    width: 100%;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    background-color: #003973;
-}
 
 p {
-    padding: 10px 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,14 +47,68 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+body {
+    display: block;
+    height: 100vh;
+
+}
+
+
+
+h2 {
+    font-family: 'Ludotek';
+    margin: 20px;
+    color: var(--color-blue);
+}
+
+section.galeria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+section.galeria .row{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: 0;
+}
+
+section.galeria .row p{
+    color: #333;
+}
+
+section.galleryBtn {
+    padding-top: 10px;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+
+
+
 section.galleryBtn .infoGallery {
     width: 100%;
     padding: 20px 100px;
     padding: 30px 0;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -167,6 +223,9 @@ section.cartas {
     .card {
         width: 60%;
     }
+    section.galeria .row{
+        width: 90%;
+    }
 }
 
 
@@ -224,8 +283,6 @@ section.galletyBtn:before {
 }
 
 .container {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-
     background-color: white;
     display: grid;
     place-items: center;
@@ -335,4 +392,285 @@ input:not(:checked)+label:hover {
 }
 
 .tabs:has(:focus-visible)::after {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+    font-family: "sourceSansProLight"
+}
+
+section.galeriaNueva {
+    min-height: 100vh;
+    padding-top: 150px;
+
+}
+
+
+
+
+
+.hero-portfolio--grid {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    position: relative;
+    top: -10vh;
+    margin: auto;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.c-card {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    transition: all 250ms ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 250px;
+
+}
+
+.c-card--figure {
+    position: relative;
+    width: 75%;
+    height: 75%;
+    margin: 0;
+}
+
+.c-card--image {
+    max-width: 100%;
+    object-fit: fill;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.c-card--name {
+    position: absolute;
+    top: auto;
+    bottom: 1rem;
+    left: 0.5rem;
+    font-size: 1em;
+    color: white;
+    background-color: #003973;
+    padding: 5px;
+}
+
+.c-card.no-focus {
+    filter: grayscale(100%);
+}
+
+.c-card.is-focus .c-card--image {
+    transition: all 250ms ease-in-out;
+}
+
+.ed-modal-content {
+    width: auto;
+    max-height: 90vh;
+    min-width: 100%;
+    margin: auto;
+    position: relative;
+    top: -3rem;
+    opacity: 0;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.ed-modal-content--section {
+    background-color: transparent;
+
+
+    width:75%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ed-modal-content--image {
+    object-fit: contain;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ed-modal-container {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    z-index: 2000;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ed-modal-container::before {
+    content: 'X';
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 1.5em;
+    opacity: .5;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ed-modal-container:hover::before {
+    cursor: pointer;
+    opacity: 1;
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ed-modal-container.is-active {
+    animation-name: modalInyect;
+    animation-duration: 340ms;
+    opacity: 1;
+    
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ed-modal-container.is-active .ed-modal-content {
+    animation-name: modalInyectContent;
+    animation-duration: 540ms;
+    top: 0;
+    opacity: 1;
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ed-modal-container.is-remove {
+    animation-name: modalRemove;
+    animation-duration: 340ms;
+}
+
+.ed-modal-container.is-remove .ed-modal-content {
+    animation-name: modalRemoveContent;
+    animation-duration: 340ms;
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-menuBurguer {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    margin: auto;
+    transition: transform 150ms ease-in-out;
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-menuBurguer--Item {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 0 0 5px;
+    background-color: var(--color_2-dark);
+    transition: transform 150ms ease-in-out;
+}
+
+.c-menuBurguer:hover .c-menuBurguer--Item:nth-child(2) {
+    transform: translateX(5px);
+}
+
+.c-menuBurguer.is-active .c-menuBurguer--Item:first-child {
+    width: 30px;
+    transition-delay: 0.2s;
+    transform: rotate(45deg);
+    transform-origin: 10% 0%;
+}
+
+.c-menuBurguer.is-active .c-menuBurguer--Item:nth-child(2) {
+    transform: translateX(40px);
+    opacity: 0;
+}
+
+.c-menuBurguer.is-active .c-menuBurguer--Item:nth-child(3) {
+    width: 30px;
+    transition-delay: 0.4s;
+    transform: rotate(-45deg);
+    transform-origin: 10% 100%;
+}
+
+@keyframes modalRemove {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes modalRemoveContent {
+    from { opacity: 1; top: 0; }
+    to   { opacity: 0; top: -3rem; }
+}
+
+@keyframes modalInyect {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes modalInyectContent {
+    from { opacity: 0; top: -3rem; }
+    to   { opacity: 1; top: 0; }
 }
