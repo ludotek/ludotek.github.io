@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dispositivo - Ludotek</title>
-    <link rel="stylesheet" href="dispositivo.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/loading.css">
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/footer.css">
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/paginas/dispositivo.css">
+
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/loading.css">
 
 
 </head>
@@ -19,9 +22,9 @@
 
         <div class="container-logo">
             <div class="logo" id="logo">
-                <a id="navLink" href="/Proyectos/ludotek/index.html">
-                    <img id="iso" class="iso" src="/Proyectos/ludotek/isotipo.png" alt="">
-                    <img id="fono" class="fono" src="/Proyectos/ludotek/logotipo.png" alt="">
+                <a id="navLink" href="/index.html">
+                    <img class="iso" src="/img/isotipo.png" alt="">
+                    <img class="fono" src="/img/logotipo.png" alt="">
                 </a>
             </div>
         </div>
@@ -29,34 +32,33 @@
         <div class="menu-bar">
             <nav>
                 <ul>
-                    <li><a href="/Proyectos/ludotek/index.html">Inicio</a></li>
-                    <li><a href="/Proyectos/ludotek/paginas/proceso.html">Fases</a>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/paginas/proceso.html">Fases</a>
                         <ul>
-                            <li><a href="/Proyectos/ludotek/paginas/dispositivo.html">Dispositivo</a></li>
-                            <li><a href="/Proyectos/ludotek/paginas/digitalizacion.html">Digitalización</a></li>
+                            <li><a href="/paginas/dispositivo.html">Dispositivo</a></li>
+                            <li><a href="/paginas/digitalizacion.html">Digitalización</a></li>
                             <li><a href="#">Restauración</a></li>
                             <li><a href="#">Resultados</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="/Proyectos/ludotek/paginas/galeria.html">Galeria</a>
+                    <li><a href="/paginas/galeria.html">Galeria</a>
                     </li>
-                    <li><a href="/Proyectos/ludotek/paginas/mapa.html">Mapa</a>
+                    <li><a href="/paginas/mapa.html">Mapa</a>
                     </li>
-                    <li><a href="/Proyectos/ludotek/paginas/equipo.html">Equipo</a>
+                    <li><a href="/paginas/equipo.html">Equipo</a>
                     </li>
                 </ul>
             </nav>
         </div>
 
 
-        <a href="" class="hambur hero__cta">
-
+        <button id="hambur" onclick="verDetalle(5)">
             <div class="ham ">
 
             </div>
+        </button>
 
-        </a>
 
 
 
@@ -84,7 +86,7 @@
     <section class="info">
         <div class="container">
             <div class="image-container">
-                <img src="/Proyectos/ludotek/img/dispo2.jpg" alt="Imagen">
+                <img src="/img/dispo2.jpg" alt="Imagen">
             </div>
             <div class="text-container">
                 <h2></h2>
@@ -101,11 +103,11 @@
 
         <div class="container">
             <div class="image-container">
-                <img src="/Proyectos/ludotek/img/dispo3.JPG" alt="Imagen">
+                <img src="/img/dispo3.JPG" alt="Imagen">
             </div>
             <div class="text-container">
                 <h2></h2>
-                <p>. La etapa de procesamiento está constituida
+                <p>La etapa de procesamiento está constituida
                     por una ESP32 la misma que se encarga de recibir, procesar e interpretar la información. La etapa
                     de actuación ejecuta las instrucciones enviadas por la tarjeta de desarrollo, donde los actuadores
                     están conformados por las luces RGB y motores paso a paso. Finalmente, la etapa de adquisición
@@ -118,7 +120,7 @@
 
         <div class="container">
             <div class="image-container">
-                <img src="/Proyectos/ludotek/img/dispo4.png" alt="Imagen">
+                <img src="/img/dispo4.png" alt="Imagen">
             </div>
             <div class="text-container">
                 <h2></h2>
@@ -134,7 +136,7 @@
 
         <div class="container">
             <div class="image-container">
-                <img src="/Proyectos/ludotek/img/dispo5.jpg" alt="Imagen">
+                <img src="/img/dispo5.jpg" alt="Imagen">
             </div>
             <div class="text-container">
                 <h2></h2>
@@ -212,15 +214,18 @@
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="/Proyectos/ludotek/index.html">Inicio</a></li>
-                    <li><a href="/Proyectos/ludotek/paginas/proceso.html">Fases</a></li>
-                    <li><a href="/Proyectos/ludotek/paginas/equipo.html">Equipo</a></li>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/paginas/proceso.html">Fases</a></li>
+                    <li><a href="/paginas/galeria.html">Galeria</a></li>
+                    <li><a href="/paginas/mapa.html">Mapa</a></li>
+                    <li><a href="/paginas/equipo.html">Equipo</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Contáctanos</h3>
-                <p>Correo: digitalización.fotografias@espoch.edu.ec</p>
-                <p>Celular: 0991194932</p>
+                <p>digitalización.fotografias@espoch.edu.ec</p>
+                <p>Celular: 0991194932</p> <br>
+                <a href="https://www.facebook.com/profile.php?id=61554102338423">Facebook</a>
             </div>
         </div>
         <div class="footer-bottom">
