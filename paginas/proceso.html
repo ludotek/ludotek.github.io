@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proceso - Ludotek</title>
 
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/proceso.css">
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/header.css">
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/loading.css">
-    <link rel="stylesheet" href="/Proyectos/ludotek/paginas/footer.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/paginas/proceso.css">
+
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/loading.css">
 
 
 </head>
@@ -18,10 +20,10 @@
     <header class="header" id="header">
 
         <div class="container-logo">
-            <div class="logo">
-                <a href="/Proyectos/ludotek/index.html">
-                    <img class="iso" src="/Proyectos/ludotek/isotipo.png" alt="">
-                    <img class="fono" src="/Proyectos/ludotek/logotipo.png" alt="">
+            <div class="logo" id="logo">
+                <a id="navLink" href="/index.html">
+                    <img class="iso" src="/img/isotipo.png" alt="">
+                    <img class="fono" src="/img/logotipo.png" alt="">
                 </a>
             </div>
         </div>
@@ -29,42 +31,52 @@
         <div class="menu-bar">
             <nav>
                 <ul>
-                    <li><a href="/Proyectos/ludotek/index.html">Inicio</a></li>
-                    <li><a href="/Proyectos/ludotek/paginas/proceso.html">Fases</a>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/paginas/proceso.html">Fases</a>
                         <ul>
-                            <li><a href="/Proyectos/ludotek/paginas/dispositivo.html">Dispositivo</a></li>
-                            <li><a href="/Proyectos/ludotek/paginas/digitalizacion.html">Digitalización</a></li>
+                            <li><a href="/paginas/dispositivo.html">Dispositivo</a></li>
+                            <li><a href="/paginas/digitalizacion.html">Digitalización</a></li>
                             <li><a href="#">Restauración</a></li>
                             <li><a href="#">Resultados</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="/Proyectos/ludotek/paginas/galeria.html">Galeria</a>
+                    <li><a href="/paginas/galeria.html">Galeria</a>
                     </li>
-                    <li><a href="/Proyectos/ludotek/paginas/mapa.html">Mapa</a>
+                    <li><a href="/paginas/mapa.html">Mapa</a>
                     </li>
-                    <li><a href="/Proyectos/ludotek/paginas/equipo.html">Equipo</a>
+                    <li><a href="/paginas/equipo.html">Equipo</a>
                     </li>
                 </ul>
             </nav>
         </div>
 
 
-        <a href="" class="hambur hero__cta">
-
+        <button id="hambur" onclick="verDetalle(5)">
             <div class="ham ">
-                
-            </div>
 
-        </a>
+            </div>
+        </button>
+
 
 
 
     </header>
-    <section class="titulo">
-        <h2>DESARROLLO DE UN PROCESO DE DIGITALIZACIÓN DE FOTOGRAFÍAS CAPTADAS EN MATERIAL FOTOSENSIBLE: CASO DE ESTUDIO
-            ARCHIVO HISTÓRICO DE DIAPOSITIVAS A COLOR DE LA ESPOCH</h2>
+
+    <section class="fases">
+        <div class="row">
+            <h2>FASES DEL PROYECTO</h2>
+            <p>Desarrollo de un proceso de digitalización de fotografías captadas en material fotosensible: caso de estudio archivo histórico de diapositivas a color de la espoch</p>
+           
+        </div>
+
+
+
+
+
     </section>
+
+
 
 
 
@@ -97,11 +109,11 @@
                         </div>
                     </div>
                     <div class="author">
-                        <img src="/Proyectos/ludotek/isotipo.png" alt="Jeison Sánchez">
+                        <img src="/img/isotipo.png" alt="Ludotek">
                         <span>Ludotek</span>
                     </div>
 
-                    <a class="verMas" href="/Proyectos/ludotek/paginas/dispositivo.html">Ver más</a>
+                    <a class="verMas" href="/paginas/dispositivo.html">Ver más</a>
                 </div>
             </div>
 
@@ -129,10 +141,10 @@
                         </div>
                     </div>
                     <div class="author">
-                        <img src="/Proyectos/ludotek/isotipo.png" alt="Jeison Sánchez">
+                        <img src="/img/isotipo.png" alt="Ludotek">
                         <span>Ludotek</span>
                     </div>
-                    <a class="verMas" href="/Proyectos/ludotek/paginas/dispositivo.html">Ver más</a>
+                    <a class="verMas" href="/paginas/dispositivo.html">Ver más</a>
                 </div>
             </div>
 
@@ -159,10 +171,10 @@
                         </div>
                     </div>
                     <div class="author">
-                        <img src="/Proyectos/ludotek/isotipo.png" alt="Jeison Sánchez">
+                        <img src="/img/isotipo.png" alt="Ludotek">
                         <span>Ludotek</span>
                     </div>
-                    <a class="verMas" href="/Proyectos/ludotek/paginas/dispositivo.html">Ver más</a>
+                    <a class="verMas" href="/paginas/dispositivo.html">Ver más</a>
                 </div>
             </div>
 
@@ -189,10 +201,10 @@
                         </div>
                     </div>
                     <div class="author">
-                        <img src="/Proyectos/ludotek/isotipo.png" alt="Jeison Sánchez">
+                        <img src="/img/isotipo.png" alt="Ludotek">
                         <span>Ludotek</span>
                     </div>
-                    <a class="verMas" href="/Proyectos/ludotek/paginas/dispositivo.html">Ver más</a>
+                    <a class="verMas" href="/paginas/dispositivo.html">Ver más</a>
                 </div>
             </div>
 
@@ -268,22 +280,24 @@
         <div class="footer-section">
             <h3>Enlaces Rápidos</h3>
             <ul>
-                <li><a href="/Proyectos/ludotek/index.html">Inicio</a></li>
-                <li><a href="/Proyectos/ludotek/paginas/proceso.html">Fases</a></li>
-                <li><a href="/Proyectos/ludotek/paginas/equipo.html">Equipo</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/paginas/proceso.html">Fases</a></li>
+                <li><a href="/paginas/galeria.html">Galeria</a></li>
+                <li><a href="/paginas/mapa.html">Mapa</a></li>
+                <li><a href="/paginas/equipo.html">Equipo</a></li>
             </ul>
         </div>
         <div class="footer-section">
             <h3>Contáctanos</h3>
-            <p>Correo: digitalización.fotografias@espoch.edu.ec</p>
-            <p>Celular: 0991194932</p>
+            <p>digitalización.fotografias@espoch.edu.ec</p>
+            <p>Celular: 0991194932</p> <br>
+            <a href="https://www.facebook.com/profile.php?id=61554102338423">Facebook</a>
         </div>
     </div>
     <div class="footer-bottom">
         <p>&copy; 2024 Empresa. Todos los derechos reservados.</p>
     </div>
 </footer>
-
 </body>
 
 <script src="/Proyectos/ludotek/script.js"></script>
