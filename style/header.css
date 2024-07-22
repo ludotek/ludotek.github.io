@@ -5,71 +5,95 @@
     background-color: rgb(255, 255, 255);
 
 }
-
 .scrolled2 {
     height: 10px;
     display: flex;
 }
-
 .logo #iso {
     height: 40px;
     width: auto;
-    
 }
-
 
 @font-face {
     font-family: 'Ludotek';
-    src: url(/Proyectos/ludotek/LUDETEK\ MAYUS.otf) format('truetype');
+    src: url(/tipografias/LUDETEK\ MAYUS.otf) format('truetype');
 }
-
-* {
-    padding: 0px;
-    margin: 0px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-
+@font-face {
+    font-family: 'sourceSansProLight';
+    src: url(/tipografias/SourceSansPro-Light.ttf) format('truetype');
 }
-
-
-
-
+@font-face {
+    font-family: 'sourceSansProRegular';
+    src: url(/tipografias/SourceSansPro-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'sourceSansProBold';
+    src: url(//tipografias/SourceSansPro-Bold.ttf) format('truetype');
+}
+:root {
+    --color-blue: #003973;
+    --color-dorado: #C7893E;
+}
 body {
     display: block;
-    height: 100vh;
+}
+h3 {
+    font-family: "sourceSansProRegular";
+}
+h4 {
+    font-family: "sourceSansProRegular";
+}
+p {
+    font-size: 16px;
+    font-family: "sourceSansProRegular";
 }
 
+
+
 header {
-
     margin-top: 0px;
-
-
-    height: 100px;
+    height: 70px;
     width: 100%;
     background-color: white;
     display: flex;
-    position: fixed;
+    position: sticky;
     justify-content: space-around;
-    padding-bottom: 20px;
     border-bottom: solid 1px #1C3C6D;
     align-items: center;
     z-index: 1000;
-
     transition: height 0.3s ease;
 }
 
+header a {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 1px 3px;
+    border-radius: 5px;
+    transition: all 0.5s ease 0s;
+    font-family: "sourceSansProRegular";
+    text-decoration: none;
+    color: var(--color-blue);
+
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
 .container-logo {
-    height: 80px;
+    height: 70px;
 }
 
 .container-logo .logo {
-    height: 100px;
+    height: 70px;
     display: flex;
     align-items: center;
 }
 
 .logo img {
     width: auto;
-    height: 50px;
+    height: 40px;
     display: block;
 }
 
@@ -93,19 +117,6 @@ ul {
     display: flex;
 }
 
-a {
-    display: flex;
-    background-color: transparent;
-    align-items: center;
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 1px 3px;
-    border-radius: 5px;
-    transition: all 0.5s ease 0s;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: black;
-}
 
 li {
     text-decoration: none;
@@ -113,18 +124,15 @@ li {
     transition: .05s;
 }
 
-
-
 header li a:hover {
-    color: rgb(0, 0, 0);
-    font-weight: 800;
+    color: var(--color-blue);
+    font-weight: 400;
     transition: .2s;
     transition: all 0.5s ease 0.1s;
     border-bottom-color: 2px solid #C48B3F!important;
     box-shadow: 0px 8px 16px rgb(199, 137, 62);
     font-weight: 800;
 }
-
 
 #hambur {
     position: relative;
@@ -141,7 +149,6 @@ header li a:hover {
     color: white;
     text-decoration: none;
     transition: 0.2s;
-
 }
 #hambur:hover {
     transition: 0.2s;
@@ -156,9 +163,6 @@ header li a:hover {
     font-weight: 600;
 }
 
-
-
-
 img {
     display: block;
     transform: scale(0.95);
@@ -168,44 +172,6 @@ img {
     width: 90%;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 nav ul {
     list-style: none;
@@ -217,16 +183,6 @@ nav ul {
 
 nav li {
     position: relative;
-}
-
-nav a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-nav a:hover {
-    color: #666;
 }
 
 nav ul ul {
@@ -250,10 +206,6 @@ nav ul ul li {
 nav ul ul li a {
     padding: 10px;
     border-bottom: 1px solid #ccc;
-}
-
-nav ul ul li a:hover {
-    background-color: #f0f0f0;
 }
 
 
