@@ -55,15 +55,17 @@ body {
 }
 
 /*GIF*/
-section.video {
+.video {
     justify-content: center;
     align-items: center;
     display: flex;
     width: 100%;
     background-color: white;
+
+    max-width: 100%;
 }
 
-section.video img {
+.video img {
     width: 100%;
 }
 
@@ -84,7 +86,7 @@ section.video img {
 .slider-frame ul {
     display: flex;
     width: 400%;
-    animation: slide 15s infinite alternate ease-in-out;
+    animation: slide 13s infinite alternate ease-in-out;
 }
 
 /*
@@ -151,6 +153,7 @@ SECCION INFORMACION INICIO
 section.info {
     display: block;
     height: auto;
+    margin: 0 20px 0 10px;
 }
 
 section.info .container {
@@ -194,7 +197,7 @@ section.info .container .contInfo {
     background-color: #ffffff !important;
     border-radius: 5px;
     color: rgb(0, 0, 0);
-    letter-spacing: 1px;
+    letter-spacing: 0.2px;
     transition: 0.2s;
     box-shadow: inset 0.5px 0px 0px rgb(0, 0, 0.3);
     text-align: justify;
@@ -216,7 +219,7 @@ section.info .container .contInfo h2 {
     border-radius: 20px;
     justify-content: center;
     align-items: center;
-    margin: 40px 20%;
+    margin: 40px 30%;
     display: flex;
     text-decoration: none;
     font-weight: 600;
@@ -347,4 +350,42 @@ h3 {
     border-radius: 5px;
     color: black;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*img {
+    pointer-events: none;
+}
+
+
+
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
 }
