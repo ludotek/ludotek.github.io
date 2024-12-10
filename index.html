@@ -9,11 +9,27 @@
 
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
-    <link rel="stylesheet" href="/style/loading.css">
 
 
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/paginas/galeria.css">
+
+    <script>
+
+        let abrir = document.getElementById("modal");
+
+        function verDetalle(numeroCard) {
+            switch (numeroCard) {
+                case 5:
+                    abrir.setAttribute("style", "display: flex");
+                    break;
+
+                case 6:
+                    abrir.setAttribute("style", "display: none");
+                    break;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -51,40 +67,33 @@
                     <li><a href="/paginas/equipo.html">Equipo</a>
                     </li>
                 </ul>
+                <div class="facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61554102338423">
+        
+                        <img src="/img/iconFacebook_b.png" alt="">
+                    </a>
+                </div>
             </nav>
         </div>
+        
 
 
         <button id="hambur" onclick="verDetalle(5)">
-            <div class="ham ">
-
-            </div>
+            X
         </button>
+
+
 
 
 
 
     </header>
 
-    <section class="video">
+    <div class="video">
 
         <img src="/img/gif3.gif" alt="gif">
 
-    </section>
-
-
-    <section class="portada">
-
-        <div class="slider-frame">
-            <ul>
-                <li><img src="/img/investigadoresLudotek2.png" alt=""></li>
-                <li><img src="/img/equi2.jpg" alt=""></li>
-                <li><img src="/img/filminas.jpg" alt=""></li>
-                <li><img src="/img/filminas2.jpeg" alt=""></li>
-            </ul>
-        </div>
-
-    </section>
+    </div>
 
     <section class="info">
         <div class="container">
@@ -130,6 +139,21 @@
         </div>
     </section>
 
+    <section class="portada">
+
+        <div class="slider-frame">
+            <ul>
+                <li><img src="/img/investigadoresLudotek2.png" alt=""></li>
+                <li><img src="/img/equi2.jpg" alt=""></li>
+                <li><img src="/img/filminas.jpg" alt=""></li>
+                <li><img src="/img/filminas2.jpeg" alt=""></li>
+            </ul>
+        </div>
+
+    </section>
+
+
+
     <section class="comparador">
 
         <div class="comparador-container">
@@ -155,6 +179,8 @@
                 </div>
                 <button id="procesar"></button>
             </div>
+            <a class="equipo-link" href="/paginas/galeria.html">Ver más</a>
+
         </div>
         <style>
             section.comparador {
@@ -187,7 +213,7 @@
                 user-drag: none;
                 -moz-user-select: none;
                 -webkit-user-drag: none;
-                
+
             }
 
             .comparador-container {
@@ -255,9 +281,11 @@
                 border-radius: 3px;
                 z-index: 11;
             }
+
             .ocultarBefore:before {
                 opacity: 0;
             }
+
             #agarre:before {
                 color: #fff;
                 font-weight: bold;
@@ -265,6 +293,7 @@
                 top: calc(50% - 35px);
                 padding-left: 2px;
             }
+
             #comparador:before,
             #comparador:after {
                 position: absolute;
@@ -291,7 +320,7 @@
                 z-index: 500;
 
             }
-           
+
 
             /*Estilos selectores imagenes*/
             .selector {
@@ -300,7 +329,7 @@
                 align-items: center;
                 flex-flow: column;
             }
-            
+
 
             input[type="file"] {
                 display: none;
@@ -324,26 +353,6 @@
     </section>
 
     <script>
-        var hambur = document.getElementById("hambur");
-
-        function verDetalle(numeroCard) {
-            switch (numeroCard) {
-                case 5:
-                    document.getElementById("modal").style.display = "flex";
-                    break;
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-
 
 
         var imagenes = ["/filminas/chim.png", "/filminas/chim2.png"];
@@ -547,7 +556,9 @@
             }
         }
     </script>
-    <div class="modal" style="display: none;">
+
+
+    <div class="modal" id="modal">
         <div class="modal__container">
             <nav>
                 <ul>
@@ -578,18 +589,24 @@
                 </ul>
             </nav>
 
-
+            <button class="modal__close" id="cerrar" onclick="verDetalle(6)">
+                Cerrar
+            </button>
             <a href="#" class="modal__close">cerrar</a>
         </div>
     </div>
 
 
+    <!--
 
     <section class="anima">
         <div id="spiral" class="spiral"></div>
         <div id="spiral2" class="spiral"></div>
 
     </section>
+
+
+    
     <script>
 
         let isFirefox = typeof InstallTrigger !== 'undefined';
@@ -641,13 +658,14 @@
         }
 
     </script>
-
+-->
 
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Nuestro Equipo</h3>
-                <p>Somos un grupo de investigadores multidisciplinario</p>
+                <p>Somos un grupo de investigadores multidisciplinario</p> <br>
+                <a href="/paginas/equipo.html">ver más</a>
             </div>
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
@@ -662,12 +680,14 @@
             <div class="footer-section">
                 <h3>Contáctanos</h3>
                 <p>digitalización.fotografias@espoch.edu.ec</p>
-                <p>Celular: 0991194932</p> <br>
-                <a href="https://www.facebook.com/profile.php?id=61554102338423"><img src="/img/iconFacebook.png" alt=""></a>
+                <p>Celular: 097 926 2761</p> <br>
+                <a href="https://www.facebook.com/profile.php?id=61554102338423">
+                    <img src="/img/iconFacebook.png" alt="">
+                </a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Empresa. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Ludotek. Todos los derechos reservados.</p>
         </div>
     </footer>
 
