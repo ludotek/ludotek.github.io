@@ -12,7 +12,6 @@
 
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
-    <link rel="stylesheet" href="/style/loading.css">
 
 
 </head>
@@ -50,6 +49,12 @@
                     <li><a href="/paginas/equipo.html">Equipo</a>
                     </li>
                 </ul>
+                <div class="facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61554102338423">
+        
+                        <img src="/img/iconFacebook_b.png" alt="">
+                    </a>
+                </div>
             </nav>
         </div>
 
@@ -152,7 +157,7 @@
                 <img src="/img/niki2.png" alt="Integrante 1">
             </div>
             <div class="team-card-info">
-                <h3>Niki</h3>
+                <h3>Nicol Espinoza</h3>
                 <p>Investigador Externo</p>
                 <p>correo@institucion.edu</p>
             </div>
@@ -191,61 +196,7 @@
 
 
 
-    <section class="anima">
-        <div id="spiral" class="spiral"></div>
-        <div id="spiral2" class="spiral"></div>
 
-    </section>
-    <script>
-
-        let isFirefox = typeof InstallTrigger !== 'undefined';
-        const words = "LUDOTEK";
-
-        let ANGLE = 360;
-        const ANIMATION_DURATION = 4000;
-
-        const animation = () => {
-            ANGLE -= 1; // Incremento do ângulo
-            document.querySelectorAll(".spiral *").forEach((el, i) => {
-
-                const translateY = Math.sin(ANGLE * (Math.PI / 120)) * 100;
-                const scale = Math.cos(ANGLE * (Math.PI / 120)) * 0.5 + 0.5;
-                words.classList.add('spiral');
-
-                const offset = parseInt(el.dataset.offset);
-                const delay = i * (ANIMATION_DURATION / 16) - offset;
-
-                setTimeout(() => {
-                    el.style.transform = `translateY(${translateY}px) scale(${scale})`;
-                }, delay);
-            });
-
-            requestAnimationFrame(animation);
-        };
-
-        const characters = words.split("").forEach((char, i) => {
-            const createElement = (offset) => {
-                const div = document.createElement("div");
-                div.innerText = char;
-                div.classList.add("character");
-                div.setAttribute("data-offset", offset);
-                div.style.animationDelay = `-${i * (ANIMATION_DURATION / 16) - offset}ms`
-                return div;
-            };
-
-            document.querySelector("#spiral").append(createElement(0));
-            document
-                .querySelector("#spiral2")
-                .append(createElement((isFirefox ? 1 : -1) * (ANIMATION_DURATION / 2)));
-        });
-
-
-        // @property CSS doesn't work in Firefox, so it must be animated using JavaScript.
-        if (isFirefox) {
-            animation();
-        }
-
-    </script>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
