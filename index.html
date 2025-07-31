@@ -9,91 +9,75 @@
 
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
-
-
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/paginas/galeria.css">
-
-    <script>
-
-        let abrir = document.getElementById("modal");
-
-        function verDetalle(numeroCard) {
-            switch (numeroCard) {
-                case 5:
-                    abrir.setAttribute("style", "display: flex");
-                    break;
-
-                case 6:
-                    abrir.setAttribute("style", "display: none");
-                    break;
-            }
-        }
-    </script>
 </head>
 
 <body>
 
-
-
     <header class="header" id="header">
-
         <div class="container-logo">
             <div class="logo" id="logo">
                 <a id="navLink" href="/index.html">
-                    <img class="iso" src="/img/isotipo.png" alt="">
-                    <img class="fono" src="/img/logotipo.png" alt="">
+                    <img class="iso" src="/img/isotipo.png" alt="Isotipo">
+                    <img class="fono" src="/img/logotipo.png" alt="Logotipo">
                 </a>
             </div>
         </div>
 
-        <div class="menu-bar">
-            <nav>
-                <ul>
+        <div class="menu-bar" id="menuBar">
+            <nav class="desktop-nav">
+                <ul class="nav-list">
                     <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/paginas/proceso.html">Fases</a>
-                        <ul>
+                    <li class="dropdown">
+                        <a href="/paginas/proceso.html">Fases</a>
+                        <ul class="dropdown-menu">
                             <li><a href="/paginas/dispositivo.html">Dispositivo</a></li>
                             <li><a href="/paginas/digitalizacion.html">Digitalización</a></li>
                             <li><a href="#">Restauración</a></li>
                             <li><a href="#">Resultados</a></li>
                         </ul>
                     </li>
-
-                    <li><a href="/paginas/galeria.html">Galeria</a>
-                    </li>
-                    <li><a href="/paginas/mapa.html">Mapa</a>
-                    </li>
-                    <li><a href="/paginas/equipo.html">Equipo</a>
+                    <li><a href="/paginas/galeria.html">Galería</a></li>
+                    <li><a href="/paginas/mapa.html">Mapa</a></li>
+                    <li><a href="/paginas/equipo.html">Equipo</a></li>
+                    <li class="social-icon">
+                        <a href="https://www.facebook.com/profile.php?id=61554102338423">
+                            <img src="/img/iconFacebook_b.png" alt="Facebook">
+                        </a>
                     </li>
                 </ul>
-                <div class="facebook">
-                    <a href="https://www.facebook.com/profile.php?id=61554102338423">
-        
-                        <img src="/img/iconFacebook_b.png" alt="">
-                    </a>
-                </div>
             </nav>
         </div>
-        
 
+        <button id="hambur" class="hamburger" aria-label="Menú móvil">☰</button>
 
-        <button id="hambur" onclick="verDetalle(5)">
-            X
-        </button>
-
-
-
-
-
-
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-list">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li class="mobile-dropdown">
+                        <a href="/paginas/proceso.html">Fases</a>
+                        <ul class="mobile-dropdown-menu">
+                            <li><a href="/paginas/dispositivo.html">Dispositivo</a></li>
+                            <li><a href="/paginas/digitalizacion.html">Digitalización</a></li>
+                            <li><a href="#">Restauración</a></li>
+                            <li><a href="#">Resultados</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/paginas/galeria.html">Galería</a></li>
+                    <li><a href="/paginas/mapa.html">Mapa</a></li>
+                    <li><a href="/paginas/equipo.html">Equipo</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="video">
-
-        <img src="/img/gif3.gif" alt="gif">
-
-    </div>
+    <section class="video-section">
+        <div class="video">
+            <img src="/img/gif3.gif" alt="gif">
+        </div>
+    </section>
 
     <section class="info">
         <div class="container">
@@ -101,20 +85,16 @@
                 <div class="flip-card" id="baja">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-
                             <img src="/filminas/__05.png" alt="">
                         </div>
                         <div class="flip-card-back">
-
                             <img src="/filminas/_05.png" alt="">
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="cont c-info">
                 <div class="contInfo">
-
                     <h2>
                         LUDOTEK
                     </h2>
@@ -129,18 +109,15 @@
                         instituciones públicas y privadas, entes particulares que necesiten gestionar, almacenar o
                         publicar imágenes que se encuentren en celuloides.
                     </p>
-
-
-
-                    <a class="equipo-link" href="/paginas/proceso.html">Ver más</a>
+                    <button type="button" class="center-btn">
+                        <a class="equipo-link" href="/paginas/proceso.html">Ver más</a>
+                    </button>
                 </div>
-
             </div>
         </div>
     </section>
 
     <section class="portada">
-
         <div class="slider-frame">
             <ul>
                 <li><img src="/img/investigadoresLudotek2.png" alt=""></li>
@@ -149,516 +126,18 @@
                 <li><img src="/img/filminas2.jpeg" alt=""></li>
             </ul>
         </div>
-
     </section>
 
-
-
     <section class="comparador">
-
         <div class="comparador-container">
             <h3>Comparador de una fotografía original y su restauración</h3>
             <h4>Haga clic en el centro amarillo y deslice para ver los cambios</h4>
-            <div id="comparador">
-                <h2>Cambiar imágenes:</h2>
-                <div id="cambio">
-                    <div class="selector">
-                        <h3>Restaurada</h3>
-                        <input id="imagen1Url" type="text" placeholder="Url de la imagen...">
-                        <p></p>
-                        <button class="fichero">Fichero</button>
-                        <input id="imagen1File" type="file" title="fich1" accept="image/*">
-                    </div>
-                    <div class="selector">
-                        <h3>Original</h3>
-                        <input id="imagen2Url" type="text" placeholder="Url de la imagen...">
-                        <p></p>
-                        <button class="fichero">Fichero</button>
-                        <input id="imagen2File" type="file" title="fich2" accept="image/*">
-                    </div>
-                </div>
-                <button id="procesar"></button>
-            </div>
-            <a class="equipo-link" href="/paginas/galeria.html">Ver más</a>
-
-        </div>
-        <style>
-            section.comparador {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-flow: column;
-                background: #ffffff;
-                padding-top: 50px;
-            }
-
-
-            #comparador {
-                position: relative;
-                display: flex;
-            }
-
-            #comparador img {
-                max-width: 100%;
-                box-shadow: 2px 0px 5px #333;
-            }
-
-            #comparador * {
-                user-select: none;
-                -moz-user-select: none;
-                -khtml-user-select: none;
-                -webkit-user-select: none;
-                -o-user-select: none;
-                user-drag: none;
-                -moz-user-select: none;
-                -webkit-user-drag: none;
-
-            }
-
-            .comparador-container {
-                justify-content: center;
-                align-items: center;
-                display: block;
-                width: 80%;
-            }
-
-            h2 {
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                font-size: 50px;
-                margin-top: 200px;
-            }
-
-            @font-face {
-                font-family: 'sourceSansProLight';
-                src: url(/tipografias/SourceSansPro-Light.ttf) format('truetype');
-            }
-
-            h3 {
-                padding: 10px;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-                color: #1C3C6D;
-            }
-
-            h4 {
-                padding: 5px;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-                color: #1C3C6D;
-                margin-bottom: 100px;
-
-            }
-
-            #flotante {
-                width: 100%;
-                position: absolute;
-                overflow: hidden;
-                top: 0;
-                left: 0;
-                height: 99%;
-                box-shadow: 2px 0px 5px #C7893E;
-                z-index: 10;
-            }
-
-            #flotante>img {
-                height: 100%;
-            }
-
-            #agarre {
-                position: absolute;
-                right: 0;
-                height: 100px;
-                width: 15px;
-                background: #C7893E;
-                top: calc(50% - 50px);
-                cursor: col-resize;
-                box-shadow: 2px 0px 6px #003973;
-                border-radius: 3px;
-                z-index: 11;
-            }
-
-            .ocultarBefore:before {
-                opacity: 0;
-            }
-
-            #agarre:before {
-                color: #fff;
-                font-weight: bold;
-                position: absolute;
-                top: calc(50% - 35px);
-                padding-left: 2px;
-            }
-
-            #comparador:before,
-            #comparador:after {
-                position: absolute;
-                background: #1C3C6D;
-                border-radius: 10px;
-                color: #fff;
-                padding: 10px;
-                top: -50px;
-                left: 0px;
-                z-index: 10;
-                font-family: "sourceSansProLight";
-            }
-
-            #comparador:before {
-                content: attr(img1);
-                z-index: 20;
-
-            }
-
-            #comparador:after {
-                content: attr(img2);
-                right: 50px;
-                left: Auto;
-                z-index: 500;
-
-            }
-
-
-            /*Estilos selectores imagenes*/
-            .selector {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-flow: column;
-            }
-
-
-            input[type="file"] {
-                display: none;
-
-            }
-
-            #cambio {
-                display: flex;
-                justify-content: space-around;
-                width: 100%;
-                flex-flow: row wrap;
-                align-items: center;
-                margin-bottom: 30px;
-            }
-
-            #cambio .selector {
-                margin: 15px;
-
-            }
-        </style>
-    </section>
-
-    <script>
-
-
-        var imagenes = ["/filminas/chim.png", "/filminas/chim2.png"];
-
-        //Imagenes sacadas de este post: 
-        //http://www.mountainphotographer.com/same-place-different-season/
-
-        cargarImagenes(imagenes);
-        selectores();
-
-        function cargarImagenes(imagenes) {
-
-            if (imagenes.length != 2) {
-                console.error("Solo puedes comparar dos imagenes");
-                return;
-            }
-
-            var divComp = document.getElementById("comparador"),
-                img1 = new Image(),
-                img2 = new Image(),
-                contenedorImg2 = document.createElement("div"),
-                agarre = document.createElement("div");
-
-            divComp.innerHTML = "";
-
-            contenedorImg2.setAttribute("id", "flotante");
-
-            //Cargamos la primera Imagen
-            img1.src = imagenes[0];
-            divComp.appendChild(img1);
-            img1.onload = function () {
-                var resta = divComp.clientWidth / 2;
-                moverFlotante(img1, img2, contenedorImg2, divComp, agarre, resta);
-            }
-            divComp.setAttribute("img1", "Restaurada");
-
-            //Cargamos la segunda imagen
-            img2.src = imagenes[1];
-            contenedorImg2.appendChild(img2);
-            divComp.appendChild(contenedorImg2);
-            divComp.setAttribute("img2", "Original");
-
-            //Cargamos el agarre
-            agarre.setAttribute("id", "agarre");
-
-            imagenes = [];
-
-            var mover = false;
-            agarre.addEventListener("mousedown", function () {
-                mover = true;
-            });
-
-            divComp.addEventListener("mouseup", function () {
-                mover = false;
-            });
-
-            divComp.addEventListener("mousemove", function (e) {
-                if (mover) {
-                    var resta = divComp.clientWidth - e.clientX;
-                    resta = e.clientX - divComp.getBoundingClientRect().left;
-                    moverFlotante(img1, img2, contenedorImg2, divComp, agarre, divComp.clientWidth - resta);
-                }
-            });
-
-            divComp.addEventListener("touchstart", function () {
-                mover = true;
-            });
-
-            divComp.addEventListener("touchend", function () {
-                mover = false;
-            });
-
-            divComp.addEventListener("touchmove", function (e) {
-                console.log(e)
-                if (mover) {
-                    var resta = divComp.clientWidth - e.touches[0].clientX;
-                    moverFlotante(img1, img2, contenedorImg2, divComp, agarre, resta);
-                }
-            });
-
-            divComp.appendChild(agarre);
-            window.onresize = function () {
-                var resta = agarre.getBoundingClientRect().right;
-                moverFlotante(img1, img2, contenedorImg2, divComp, agarre, resta);
-            }
-
-        }
-
-        function moverFlotante(img1, img2, contenedorImg2, divComp, agarre, resta) {
-
-            if (resta - 5 < 0) {
-                resta = 0;
-            }
-            if (resta > divComp.clientWidth) {
-                resta = divComp.clientWidth;
-            }
-
-            agarre.style.right = (resta - 5) + "px";
-
-            img2.style.minWidth = img1.clientWidth + "px";
-
-            var porcentaje = (resta / divComp.clientWidth) * 100;
-            if (porcentaje > 100) {
-                porcentaje = 100;
-            }
-            if (porcentaje < 0) {
-                porcentaje = 0;
-            }
-            contenedorImg2.style.height = img1.clientHeight + "px";
-            contenedorImg2.style.width = (100 - porcentaje) + "%";
-
-
-            var anchoPseudo = parseFloat(window.getComputedStyle(divComp, ':before').width.replace("px", ""));
-
-            if (divComp.clientWidth - resta < anchoPseudo) {
-                divComp.setAttribute("class", "ocultarBefore");
-            } else {
-                divComp.removeAttribute("class");
-            }
-
-        }
-
-        var imagenesFicheros = {
-            fich1: "",
-            fich2: ""
-        }
-
-        /*Funcion que inicializa los selectores*/
-        function selectores() {
-            var url1 = document.getElementById("imagen1Url"),
-                url2 = document.getElementById("imagen2Url"),
-                fich1 = document.getElementById("imagen1File"),
-                fich2 = document.getElementById("imagen2File"),
-                botones = document.querySelectorAll(".fichero");
-
-            for (var i = 0; i < botones.length; i++) {
-                botones[i].addEventListener("click", function () {
-                    this.nextElementSibling.click();
-                })
-            }
-
-            fich1.addEventListener("change", cargarImagen);
-            fich2.addEventListener("change", cargarImagen);
-
-            document.getElementById("procesar").addEventListener("click", function () {
-                var urlFinal1 = "",
-                    urlFinal2 = "";
-
-                if (url1.value != "") {
-                    urlFinal1 = url1.value;
-                    imagenesFicheros.fich1 = url1.value;
-                }
-
-                if (url2.value != "") {
-                    urlFinal2 = url2.value;
-                    imagenesFicheros.fich2 = url2.value;
-                }
-
-                console.log(imagenesFicheros)
-
-                if (urlFinal1 != "" && urlFinal2 != "") {
-                    imagenesFicheros.fich1 = "";
-                    imagenesFicheros.fich2 = "";
-                    url1.value = "";
-                    url2.value = "";
-                    cargarImagenes([urlFinal1, urlFinal2]);
-                } else if (imagenesFicheros.fich1 != "" && imagenesFicheros.fich2 != "") {
-                    cargarImagenes([imagenesFicheros.fich1, imagenesFicheros.fich2]);
-                } else {
-                    alert("Tienes que seleccionar dos imágenes")
-                }
-
-
-            });
-        }
-
-        function cargarImagen(evt) {
-
-
-            var tgt = evt.target || window.event.srcElement,
-                files = tgt.files,
-                botones = document.querySelectorAll(".selector button, #procesar");
-
-
-
-            if (FileReader && files && files.length) {
-                var fr = new FileReader(),
-                    that = this;
-
-                for (var i = 0; i < botones.length; i++) {
-                    botones[i].disabled = "true";
-                }
-
-                fr.onload = function () {
-                    imagenesFicheros[that.title] = fr.result;
-                    for (var i = 0; i < botones.length; i++) {
-                        botones[i].removeAttribute("disabled");
-                    }
-                }
-                fr.readAsDataURL(files[0]);
-            }
-        }
-    </script>
-
-
-    <div class="modal" id="modal">
-        <div class="modal__container">
-            <nav>
-                <ul>
-                    <a href="/Proyectos/pagina Ofi/index.html">
-
-                        <li>inicio</li>
-                    </a>
-
-                    <a href="">
-                        <li>Servicios</li>
-                    </a>
-                    <a href="">
-
-                        <li>Equipo</li>
-                    </a>
-                    <a href="/Proyectos/pagina Ofi/paginas/contacto.html">
-
-                        <li>Contacto</li>
-                    </a>
-                    <a href="">
-
-                        <li>Blog</li>
-                    </a>
-                    <a href="paginas/cursos.html">
-                        <li>Cursos</li>
-                    </a>
-
-                </ul>
-            </nav>
-
-            <button class="modal__close" id="cerrar" onclick="verDetalle(6)">
-                Cerrar
+            <div id="comparador"></div>
+            <button type="button" class="center-btn" style="margin-top:40px;">
+                <a class="equipo-link" href="/paginas/galeria.html">Ver más en la galería</a>
             </button>
-            <a href="#" class="modal__close">cerrar</a>
         </div>
-    </div>
-
-
-    <!--
-
-    <section class="anima">
-        <div id="spiral" class="spiral"></div>
-        <div id="spiral2" class="spiral"></div>
-
     </section>
-
-
-    
-    <script>
-
-        let isFirefox = typeof InstallTrigger !== 'undefined';
-        const words = "LUDOTEK";
-
-        let ANGLE = 360;
-        const ANIMATION_DURATION = 4000;
-
-        const animation = () => {
-            ANGLE -= 1; // Incremento do ângulo
-            document.querySelectorAll(".spiral *").forEach((el, i) => {
-
-                const translateY = Math.sin(ANGLE * (Math.PI / 120)) * 100;
-                const scale = Math.cos(ANGLE * (Math.PI / 120)) * 0.5 + 0.5;
-                words.classList.add('spiral');
-
-
-                const offset = parseInt(el.dataset.offset);
-                const delay = i * (ANIMATION_DURATION / 16) - offset;
-
-                setTimeout(() => {
-                    el.style.transform = `translateY(${translateY}px) scale(${scale})`;
-                }, delay);
-            });
-
-            requestAnimationFrame(animation);
-        };
-
-        const characters = words.split("").forEach((char, i) => {
-            const createElement = (offset) => {
-                const div = document.createElement("div");
-                div.innerText = char;
-                div.classList.add("character");
-                div.setAttribute("data-offset", offset);
-                div.style.animationDelay = `-${i * (ANIMATION_DURATION / 16) - offset}ms`
-                return div;
-            };
-
-            document.querySelector("#spiral").append(createElement(0));
-            document
-                .querySelector("#spiral2")
-                .append(createElement((isFirefox ? 1 : -1) * (ANIMATION_DURATION / 2)));
-        });
-
-
-        // @property CSS doesn't work in Firefox, so it must be animated using JavaScript.
-        if (isFirefox) {
-            animation();
-        }
-
-    </script>
--->
 
     <footer class="footer">
         <div class="footer-container">
@@ -691,8 +170,12 @@
         </div>
     </footer>
 
-
     <script src="/script.js"></script>
+    <script src="/comparador.js"></script>
+
+
+
+
 </body>
 
 </html>
