@@ -268,10 +268,13 @@ header a {
     }
 }
 
-/* 768px */
+/* Mostrar hamburguesa y ocultar menú de escritorio en tablet/móvil */
 @media only screen and (max-width: 768px) {
-    header {
-        padding: 0 8px;
+    .hamburger {
+        display: block !important;
+    }
+    .menu-bar {
+        display: none !important;
     }
     .logo img {
         max-height: 26px;
@@ -280,22 +283,13 @@ header a {
         height: 16px;
         margin-left: 5px;
     }
-    .hamburger {
-        font-size: 22px;
-        padding: 8px;
-    }
     .mobile-menu {
         width: 100%;
         left: 0;
         right: 0;
     }
 }
-
-/* 425px */
 @media only screen and (max-width: 425px) {
-    header {
-        padding: 0 4px;
-    }
     .logo img {
         max-height: 18px;
     }
@@ -307,18 +301,8 @@ header a {
         font-size: 20px;
         padding: 6px;
     }
-    .mobile-menu {
-        width: 100%;
-        left: 0;
-        right: 0;
-    }
 }
-
-/* 375px */
 @media only screen and (max-width: 375px) {
-    header {
-        padding: 0 2px;
-    }
     .logo img {
         max-height: 16px;
     }
@@ -330,18 +314,8 @@ header a {
         font-size: 18px;
         padding: 4px;
     }
-    .mobile-menu {
-        width: 100%;
-        left: 0;
-        right: 0;
-    }
 }
-
-/* 320px */
 @media only screen and (max-width: 320px) {
-    header {
-        padding: 0 1px;
-    }
     .logo img {
         max-height: 12px;
     }
@@ -352,10 +326,5 @@ header a {
     .hamburger {
         font-size: 16px;
         padding: 2px;
-    }
-    .mobile-menu {
-        width: 100%;
-        left: 0;
-        right: 0;
     }
 }
