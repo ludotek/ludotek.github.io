@@ -199,7 +199,7 @@ section.info .flip-card img {
 }
 .slider-frame {
     width: 100vw !important;
-    height: 90vh;
+    height: 80vh;
     object-position: center center;
     margin: 0 !important;
     padding: 0 !important;
@@ -387,7 +387,7 @@ input[type="file"] {
         align-items: center;
     }
     .slider-frame {
-        height: 70vh !important;
+        height: 60vh !important;
     }
     .comparador-container {
         width: 100vw !important;
