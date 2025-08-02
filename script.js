@@ -1,36 +1,202 @@
+var imagenes = ["/filminas/chim.png", "/filminas/chim2.png"];
+
+//Imagenes sacadas de este post: 
+//http://www.mountainphotographer.com/same-place-different-season/
+
+cargarImagenes(imagenes);
+selectores();
+
+function cargarImagenes(imagenes) {
+
+    if (imagenes.length != 2) {
+        console.error("Solo puedes comparar dos imagenes");
+        return;
+    }
+
+    var divComp = document.getElementById("comparador"),
+        img1 = new Image(),
+        img2 = new Image(),
+        contenedorImg2 = document.createElement("div"),
+        agarre = document.createElement("div");
+
+    divComp.innerHTML = "";
+
+    contenedorImg2.setAttribute("id", "flotante");
+
+    //Cargamos la primera Imagen
+    img1.src = imagenes[0];
+    divComp.appendChild(img1);
+    img1.onload = function () {
+        var resta = divComp.clientWidth / 2;
+        moverFlotante(img1, img2, contenedorImg2, divComp, agarre, resta);
+    }
+    divComp.setAttribute("img1", "Restaurada");
+
+    //Cargamos la segunda imagen
+    img2.src = imagenes[1];
+    contenedorImg2.appendChild(img2);
+    divComp.appendChild(contenedorImg2);
+    divComp.setAttribute("img2", "Original");
+
+    //Cargamos el agarre
+    agarre.setAttribute("id", "agarre");
+
+    imagenes = [];
+
+    var mover = false;
+    agarre.addEventListener("mousedown", function () {
+        mover = true;
+    });
+
+    divComp.addEventListener("mouseup", function () {
+        mover = false;
+    });
+
+    divComp.addEventListener("mousemove", function (e) {
+        if (mover) {
+            var resta = divComp.clientWidth - e.clientX;
+            resta = e.clientX - divComp.getBoundingClientRect().left;
+            moverFlotante(img1, img2, contenedorImg2, divComp, agarre, divComp.clientWidth - resta);
+        }
+    });
+
+    divComp.addEventListener("touchstart", function () {
+        mover = true;
+    });
+
+    divComp.addEventListener("touchend", function () {
+        mover = false;
+    });
+
+    divComp.addEventListener("touchmove", function (e) {
+        console.log(e)
+        if (mover) {
+            var resta = divComp.clientWidth - e.touches[0].clientX;
+            moverFlotante(img1, img2, contenedorImg2, divComp, agarre, resta);
+        }
+    });
+
+    divComp.appendChild(agarre);
+    window.onresize = function () {
+        var resta = agarre.getBoundingClientRect().right;
+        moverFlotante(img1, img2, contenedorImg2, divComp, agarre, resta);
+    }
+
+}
+
+function moverFlotante(img1, img2, contenedorImg2, divComp, agarre, resta) {
+
+    if (resta - 5 < 0) {
+        resta = 0;
+    }
+    if (resta > divComp.clientWidth) {
+        resta = divComp.clientWidth;
+    }
+
+    agarre.style.right = (resta - 5) + "px";
+
+    img2.style.minWidth = img1.clientWidth + "px";
+
+    var porcentaje = (resta / divComp.clientWidth) * 100;
+    if (porcentaje > 100) {
+        porcentaje = 100;
+    }
+    if (porcentaje < 0) {
+        porcentaje = 0;
+    }
+    contenedorImg2.style.height = img1.clientHeight + "px";
+    contenedorImg2.style.width = (100 - porcentaje) + "%";
 
 
-window.addEventListener('scroll', function() {
-  var header = document.getElementById('header');
-  var iso = document.getElementById('iso');
+    var anchoPseudo = parseFloat(window.getComputedStyle(divComp, ':before').width.replace("px", ""));
+
+    if (divComp.clientWidth - resta < anchoPseudo) {
+        divComp.setAttribute("class", "ocultarBefore");
+    } else {
+        divComp.removeAttribute("class");
+    }
+
+}
+
+var imagenesFicheros = {
+    fich1: "",
+    fich2: ""
+}
+
+/*Funcion que inicializa los selectores*/
+function selectores() {
+    var url1 = document.getElementById("imagen1Url"),
+        url2 = document.getElementById("imagen2Url"),
+        fich1 = document.getElementById("imagen1File"),
+        fich2 = document.getElementById("imagen2File"),
+        botones = document.querySelectorAll(".fichero");
+
+    for (var i = 0; i < botones.length; i++) {
+        botones[i].addEventListener("click", function () {
+            this.nextElementSibling.click();
+        })
+    }
+
+    fich1.addEventListener("change", cargarImagen);
+    fich2.addEventListener("change", cargarImagen);
+
+    document.getElementById("procesar").addEventListener("click", function () {
+        var urlFinal1 = "",
+            urlFinal2 = "";
+
+        if (url1.value != "") {
+            urlFinal1 = url1.value;
+            imagenesFicheros.fich1 = url1.value;
+        }
+
+        if (url2.value != "") {
+            urlFinal2 = url2.value;
+            imagenesFicheros.fich2 = url2.value;
+        }
+
+        console.log(imagenesFicheros)
+
+        if (urlFinal1 != "" && urlFinal2 != "") {
+            imagenesFicheros.fich1 = "";
+            imagenesFicheros.fich2 = "";
+            url1.value = "";
+            url2.value = "";
+            cargarImagenes([urlFinal1, urlFinal2]);
+        } else if (imagenesFicheros.fich1 != "" && imagenesFicheros.fich2 != "") {
+            cargarImagenes([imagenesFicheros.fich1, imagenesFicheros.fich2]);
+        } else {
+            alert("Tienes que seleccionar dos imágenes")
+        }
 
 
-  if (window.pageYOffset > 0) {
-    header.classList.add('scrolled');
-    
-  } else {
-    header.classList.remove('scrolled');
-  
-  }
+    });
+}
 
-  if (window.pageYOffset > 0) {
-    iso.classList.add('scrolled2');
-    
-  } else {
-    iso.classList.remove('scrolled2');
-  
-  }
-});
+function cargarImagen(evt) {
+
+
+    var tgt = evt.target || window.event.srcElement,
+        files = tgt.files,
+        botones = document.querySelectorAll(".selector button, #procesar");
 
 
 
-if (window.pageYOffset > 0) {
-  iso.classList.add('scrolled2');
+    if (FileReader && files && files.length) {
+        var fr = new FileReader(),
+            that = this;
 
-  
-} else {
-  iso.classList.remove('scrolled2');
+        for (var i = 0; i < botones.length; i++) {
+            botones[i].disabled = "true";
+        }
 
+        fr.onload = function () {
+            imagenesFicheros[that.title] = fr.result;
+            for (var i = 0; i < botones.length; i++) {
+                botones[i].removeAttribute("disabled");
+            }
+        }
+        fr.readAsDataURL(files[0]);
+    }
 }
 
 
@@ -44,35 +210,6 @@ if (window.pageYOffset > 0) {
 
 
 
-const openModal2 = document.getElementById("clic2");
-const modal2 = document.getElementById("modal2");
-const closeModal2 = document.getElementById('modal__close2');
-
-openModal2.addEventListener('click', (e) => {
-  e.preventDefault();
-  modal2.classList.add('modal--show');
-  //modal.setAttribute("style", "display:flex")
-});
-
-closeModal2.addEventListener('click', (e) => {
-  e.preventDefault();
-  modal2.classList.remove('modal--show');
-});
-
-
-
-const openModal3 = document.getElementById("clic3");
-const modal3 = document.getElementById("modal3");
-const closeModal3 = document.getElementById('modal__close3');
-openModal3.addEventListener('click', (e) => {
-  e.preventDefault();
-  modal3.classList.add('modal--show');
-  //modal.setAttribute("style", "display:flex")
-});
-closeModal3.addEventListener('click', (e) => {
-  e.preventDefault();
-  modal3.classList.remove('modal--show');
-});
 
 
 
@@ -82,15 +219,25 @@ closeModal3.addEventListener('click', (e) => {
 
 
 
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-}, false);
 
 
-window.addEventListener('beforeunload', function (e) {
-  e.preventDefault();
-  e.returnValue = '';
-});
+
+
+
+
+
+
+
+
+// document.addEventListener('contextmenu', function(e) {
+//   e.preventDefault();
+// }, false);
+
+
+// window.addEventListener('beforeunload', function (e) {
+//   e.preventDefault();
+//   e.returnValue = '';
+// });
 
 
 
@@ -118,36 +265,14 @@ teamMemberPhotos.forEach(photo => {
 
 
 
-const openModal = document.querySelector('.hambur');
-const modal = document.querySelector('.modal');
-const closeModal = document.querySelector('.modal__close');
-
-openModal.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal.classList.add('modal--show');
-
-});
-
-closeModal.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal.classList.remove('modal--show');
-
-});
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hambur');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-
-
-
-
-
-var animation = bodymovin.loadAnimation({
-
-  container: document.getElementById('anim'),
-  rederer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: 'data.json'
-
+  hamburger.addEventListener('click', () => {
+      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+  });
 });
