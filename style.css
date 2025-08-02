@@ -366,10 +366,65 @@ input[type="file"] {
         box-shadow: inset 0px 0px 0px rgb(0, 0, 0.3);
     }
 }
+@media only screen and (max-width: 1024px) {
+    section.info,
+    .slider-frame,
+    .comparador-container,
+    .video-section {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        box-sizing: border-box;
+    }
+    .video {
+        width: 100vw !important;
+        height: 70vh !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider-frame {
+        height: 70vh !important;
+    }
+    .comparador-container {
+        width: 100vw !important;
+        padding: 10px 0 !important;
+        margin: 0 auto !important;
+    }
+    section.info .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin: 0 auto !important;
+        padding: 20px 0 !important;
+        box-sizing: border-box;
+    }
+    section.info .container .cont,
+    section.info .container .contInfo {
+        width: 100% !important;
+        max-width: 700px;
+        margin: 0 auto !important;
+        padding: 10px 0 !important;
+        box-sizing: border-box;
+    }
+    section.info .container .cont .contImg {
+        height: 350px !important;
+        min-height: 180px !important;
+    }
+}
 @media only screen and (max-width: 900px) {
     .slider-frame,
     .comparador-container {
         width: 98vw;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        box-sizing: border-box;
     }
     .video-section,
     .video,
@@ -381,24 +436,97 @@ input[type="file"] {
         width: 98vw;
     }
 }
-@media only screen and (max-width: 600px) {
-    section.info .container {
-        padding: 10px 0;
+@media only screen and (max-width: 768px) {
+    .video {
+        height: 50vh !important;
     }
     .slider-frame {
-        width: 100vw;
+        height: 50vh !important;
     }
     .comparador-container {
-        width: 100vw;
-        padding: 10px 0;
+        padding: 5px 0 !important;
     }
-    #cambio {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .selector {
-        max-width: 100%;
-        min-width: unset;
-        margin: 10px auto;
+    section.info .container .cont .contImg {
+        height: 200px !important;
+        min-height: 100px !important;
     }
 }
+@media only screen and (max-width: 425px) {
+    .video {
+        height: 35vh !important;
+    }
+    .slider-frame {
+        height: 35vh !important;
+    }
+    .comparador-container {
+        padding: 2px 0 !important;
+    }
+    section.info .container {
+        padding: 2px 0 !important;
+    }
+    section.info .container .cont .contImg {
+        height: 120px !important;
+        min-height: 60px !important;
+    }
+    h2 {
+        font-size: 22px !important;
+        margin-top: 20px !important;
+    }
+    h3, h4 {
+        font-size: 16px !important;
+        padding: 3px !important;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .video {
+        height: 28vh !important;
+    }
+    .slider-frame {
+        height: 28vh !important;
+    }
+    .comparador-container {
+        padding: 1px 0 !important;
+    }
+    section.info .container {
+        padding: 1px 0 !important;
+    }
+    section.info .container .cont .contImg {
+        height: 90px !important;
+        min-height: 40px !important;
+    }
+    h2 {
+        font-size: 18px !important;
+        margin-top: 10px !important;
+    }
+    h3, h4 {
+        font-size: 14px !important;
+        padding: 2px !important;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .video {
+        height: 22vh !important;
+    }
+    .slider-frame {
+        height: 22vh !important;
+    }
+    .comparador-container {
+        padding: 0 !important;
+    }
+    section.info .container {
+        padding: 0 !important;
+    }
+    section.info .container .cont .contImg {
+        height: 60px !important;
+        min-height: 30px !important;
+    }
+    h2 {
+        font-size: 15px !important;
+        margin-top: 5px !important;
+    }
+    h3, h4 {
+        font-size: 12px !important;
+        padding: 1px !important;
+    }
+}
+
