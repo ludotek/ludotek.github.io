@@ -1,3 +1,32 @@
+// --- MENÚ RESPONSIVE: Submenú Fases en móvil ---
+document.addEventListener('DOMContentLoaded', function () {
+    // Menú móvil toggle
+    var hamburger = document.getElementById('hambur');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function () {
+            var expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('active');
+        });
+    }
+
+    // Submenú Fases en móvil
+    var mobileDropdown = document.querySelector('.mobile-dropdown > a');
+    var mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
+    if (mobileDropdown && mobileDropdownMenu) {
+        mobileDropdown.addEventListener('click', function (e) {
+            e.preventDefault();
+            mobileDropdownMenu.style.display = (mobileDropdownMenu.style.display === 'block') ? 'none' : 'block';
+        });
+    }
+    // Cerrar submenú al hacer clic fuera
+    document.addEventListener('click', function (e) {
+        if (mobileDropdown && mobileDropdownMenu && !mobileDropdown.contains(e.target) && !mobileDropdownMenu.contains(e.target)) {
+            mobileDropdownMenu.style.display = 'none';
+        }
+    });
+});
 var imagenes = ["/filminas/chim.png", "/filminas/chim2.png"];
 
 //Imagenes sacadas de este post: 
