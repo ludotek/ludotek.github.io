@@ -17,51 +17,62 @@
 <body>
 
     <header class="header" id="header">
-
         <div class="container-logo">
             <div class="logo" id="logo">
                 <a id="navLink" href="/index.html">
-                    <img class="iso" src="/img/isotipo.png" alt="">
-                    <img class="fono" src="/img/logotipo.png" alt="">
+                    <img class="iso" src="/img/isotipo.png" alt="Isotipo">
+                    <img class="fono" src="/img/logotipo.png" alt="Logotipo">
                 </a>
             </div>
         </div>
 
-        <div class="menu-bar">
-            <nav>
-                <ul>
+        <div class="menu-bar" id="menuBar">
+            <nav class="desktop-nav">
+                <ul class="nav-list">
                     <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/paginas/proceso.html">Fases</a>
-                        <ul>
+                    <li class="dropdown">
+                        <a href="/paginas/proceso.html">Fases</a>
+                        <ul class="dropdown-menu">
                             <li><a href="/paginas/dispositivo.html">Dispositivo</a></li>
                             <li><a href="/paginas/digitalizacion.html">Digitalización</a></li>
                             <li><a href="#">Restauración</a></li>
                             <li><a href="#">Resultados</a></li>
                         </ul>
                     </li>
-
-                    <li><a href="/paginas/galeria.html">Galeria</a>
-                    </li>
-                    <li><a href="/paginas/mapa.html">Mapa</a>
-                    </li>
-                    <li><a href="/paginas/equipo.html">Equipo</a>
+                    <li><a href="/paginas/galeria.html">Galería</a></li>
+                    <li><a href="/paginas/mapa.html">Mapa</a></li>
+                    <li><a href="/paginas/equipo.html">Equipo</a></li>
+                    <li class="social-icon">
+                        <a href="https://www.facebook.com/profile.php?id=61554102338423">
+                            <img src="/img/iconFacebook_b.png" alt="Facebook">
+                        </a>
                     </li>
                 </ul>
-                <div class="facebook">
-                    <a href="https://www.facebook.com/profile.php?id=61554102338423">
-        
-                        <img src="/img/iconFacebook_b.png" alt="">
-                    </a>
-                </div>
             </nav>
         </div>
 
+        <button id="hambur" class="hamburger" aria-label="Menú móvil" aria-expanded="false" aria-controls="mobileMenu">☰</button>
 
-
-
-
-
-
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-list">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li class="mobile-dropdown">
+                        <a href="/paginas/proceso.html">Fases</a>
+                        <ul class="mobile-dropdown-menu">
+                            <li><a href="/paginas/dispositivo.html">Dispositivo</a></li>
+                            <li><a href="/paginas/digitalizacion.html">Digitalización</a></li>
+                            <li><a href="#">Restauración</a></li>
+                            <li><a href="#">Resultados</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/paginas/galeria.html">Galería</a></li>
+                    <li><a href="/paginas/mapa.html">Mapa</a></li>
+                    <li><a href="/paginas/equipo.html">Equipo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     </header>
 
     <section class="galeria">
