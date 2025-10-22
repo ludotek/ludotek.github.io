@@ -145,11 +145,13 @@ section.foto {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  padding: 10px 0;
 }
 
 .team-card-image {
   height: 200px;
   overflow: hidden;
+  padding: 10px;
 }
 
 .team-card-image img {

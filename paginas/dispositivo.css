@@ -31,9 +31,7 @@ h2{
     text-align: center;
     line-height: 35px;
 }
-h3 {
-    font-family: "sourceSansProRegular";
-}
+/* h3 heredará la fuente general definida en body o en el contenedor */
 h4 {
     font-family: "sourceSansProRegular";
 }
@@ -142,6 +140,7 @@ section.modelado {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .text-container {
@@ -161,6 +160,15 @@ section.modelado {
     display: flex;
     color: #333;
     padding: 25px;
+}
+
+.text-container h3 {
+    font-family: 'ludotek';
+    color: var(--color-blue);
+    text-align: center;
+    margin: 10px 0 10px 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
 }
 
 

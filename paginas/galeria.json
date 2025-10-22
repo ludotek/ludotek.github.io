@@ -1,0 +1,192 @@
+[
+	{
+		"id": 1,
+		"titulo": "Cancha Ciencias",
+		"imagenes": [
+			"../filminas/cancha.jpg",
+			"../filminas/cancha2.jpg",
+			"../filminas/cancha3.png"
+		]
+	},
+	{
+		"id": 2,
+		"titulo": "Asofade",
+		"imagenes": [
+			"../filminas/asofade.png",
+			"../filminas/asofade1.png",
+			"../filminas/asofade1.png"
+		]
+	},
+	{
+		"id": 3,
+		"titulo": "Adoquin",
+		"imagenes": [
+			"../filminas/adoquin.png",
+			"../filminas/adoquin1.png",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 4,
+		"titulo": "construccion",
+		"imagenes": [
+			"../filminas/borroso1.png",
+			"../filminas/borroso2.png",
+			"../filminas/"
+		]
+	},
+     {
+		"id": 5,
+		"titulo": "Autoridades",
+		"imagenes": [
+			"../filminas/busorojo.png",
+			"../filminas/busorojo2.png",
+			"../filminas/"
+		]
+	}
+    ,
+    {
+		"id": 6,
+		"titulo": "Autoridades",
+		"imagenes": [
+			"../filminas/camisablanca.png",
+			"../filminas/camisablanca1.png",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 7,
+		"titulo": "Autoridades",
+		"imagenes": [
+			"../filminas/carpeta1.png",
+			"../filminas/carpeta2.png",
+			"../filminas/"
+		]
+	},
+     {
+		"id": 8,
+		"titulo": "construccion",
+		"imagenes": [
+			"../filminas/casco1.png",
+			"../filminas/casco2.png",
+			"../filminas/"
+		]
+	},
+     {
+		"id": 9,
+		"titulo": "Cerrucho",
+		"imagenes": [
+			"../filminas/cerrucho.png",
+			"../filminas/cerrucho1.png",
+			"../filminas/"
+		]
+	},
+     {
+		"id": 10,
+		"titulo": "Césped",
+		"imagenes": [
+			"../filminas/cesped.png",
+			"../filminas/cesped1.png",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 11,
+		"titulo": "Chimborazo",
+		"imagenes": [
+			"../filminas/chim.png",
+			"../filminas/chim2.png",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 12,
+		"titulo": "Construccion",
+		"imagenes": [
+			"../filminas/construc1.png",
+			"../filminas/construc2.png",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 13,
+		"titulo": "Autoridades",
+		"imagenes": [
+			"../filminas/corbata.png",
+			"../filminas/corbata1.png",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 14,
+		"titulo": "Piscina",
+		"imagenes": [
+			"../filminas/cubierta.jpg",
+			"../filminas/cubierta1.jpg",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 15,
+		"titulo": "Autoridades",
+		"imagenes": [
+			"../filminas/escalera.png",
+			"../filminas/escalera1.png",
+			"../filminas/"
+		]
+	},
+     {
+		"id": 16,
+		"titulo": "Construccion",
+		"imagenes": [
+			"../filminas/hoyo.png",
+			"../filminas/hoyo1.png",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 17,
+		"titulo": "Piscina 2",
+		"imagenes": [
+			"../filminas/malla.png",
+			"../filminas/malla1.png",
+			"../filminas/"
+		]
+	},
+     {
+		"id": 18,
+		"titulo": "Construccion Mecánica",
+		"imagenes": [
+			"../filminas/mecanica.png",
+			"../filminas/mecanica1.png",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 19,
+		"titulo": "Autoridades",
+		"imagenes": [
+			"../filminas/persona1.jpg",
+			"../filminas/persona2.jpg",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 20,
+		"titulo": "Construcción",
+		"imagenes": [
+			"../filminas/ripio.jpg",
+			"../filminas/ripio2.jpg",
+			"../filminas/"
+		]
+	},
+    {
+		"id": 21,
+		"titulo": "Construcción",
+		"imagenes": [
+			"../filminas/tuberia.jpg",
+			"../filminas/tuberia2.jpg",
+			"../filminas/"
+		]
+	}
+]
