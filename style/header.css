@@ -103,7 +103,7 @@ header a {
     align-items: center;
 }
 
-.nav-list > li {
+.nav-list>li {
     position: relative;
     margin: 0 10px;
     height: 100%;
@@ -141,6 +141,8 @@ header a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: none;
     z-index: 1001;
+    list-style: none;
+    margin: 0;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -154,6 +156,9 @@ header a {
 .dropdown-menu a {
     padding: 8px 15px;
     width: 100%;
+    text-decoration: none;
+    border: none;
+    background: none;
 }
 
 /* Estilos del icono de Facebook */
@@ -206,7 +211,7 @@ header a {
     padding: 15px 0;
 }
 
-.mobile-nav-list > li {
+.mobile-nav-list>li {
     padding: 10px 20px;
 }
 
@@ -222,6 +227,17 @@ header a {
 .mobile-dropdown-menu {
     padding-left: 20px;
     display: none;
+    list-style: none;
+    margin: 0;
+    background: white;
+    border: none;
+    box-shadow: none;
+}
+
+.mobile-dropdown-menu a {
+    text-decoration: none;
+    border: none;
+    background: none;
 }
 
 .mobile-dropdown-menu li {
@@ -254,13 +270,16 @@ header a {
     header {
         padding: 0 12px;
     }
+
     .logo img {
         max-height: 32px;
     }
+
     .logo .fono {
         height: 22px;
         margin-left: 8px;
     }
+
     .mobile-menu {
         width: 100%;
         left: 0;
@@ -273,59 +292,81 @@ header a {
     .hamburger {
         display: block !important;
     }
+
     .menu-bar {
         display: none !important;
     }
+
     .logo img {
-        max-height: 26px;
+        max-height: 30px;
     }
+
     .logo .fono {
-        height: 16px;
-        margin-left: 5px;
+        height: 20px;
+        margin-left: 10px;
     }
+
     .mobile-menu {
         width: 100%;
         left: 0;
         right: 0;
     }
+
+    .hamburger {
+        font-size: 25px;
+        padding-right: 30px;
+    }
 }
+
 @media only screen and (max-width: 425px) {
     .logo img {
-        max-height: 18px;
+        max-height: 40px;
+        padding: 5px;
     }
+
     .logo .fono {
-        height: 12px;
+        height: 30px;
         margin-left: 3px;
     }
+
     .hamburger {
-        font-size: 20px;
-        padding: 6px;
+        font-size: 25px;
+        padding-right: 20px;
     }
 }
+
 @media only screen and (max-width: 375px) {
     .logo img {
-        max-height: 16px;
+        max-height: 35px;
+        padding: 5px;
     }
+
     .logo .fono {
-        height: 10px;
+        height: 25px;
         margin-left: 2px;
     }
+
     .hamburger {
-        font-size: 18px;
-        padding: 4px;
+        font-size: 25px;
+        padding-right: 15px;
     }
 }
+
 @media only screen and (max-width: 320px) {
     .logo img {
-        max-height: 15px;
+        max-height: 35px;
         padding: 5px;
     }
+
     .logo .fono {
-        height: 15px;
+        height: 25px;
         margin-left: 1px;
     }
+
     .hamburger {
-        font-size: 20px;
+        font-size: 25px;
         padding: 5px;
+        padding-right: 10px;
+
     }
 }
