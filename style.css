@@ -362,7 +362,7 @@ section.comparador {
 }
 @media (max-width: 768px) {
     .video {
-        height: 50vw;
+        height: 80vw;
     }
     .slider-frame {
         height: 50vw;
@@ -374,7 +374,7 @@ section.comparador {
 }
 @media (max-width: 425px) {
     .video {
-        height: 35vw;
+        height: 75vw;
     }
     .slider-frame {
         height: 55vw;
@@ -394,7 +394,7 @@ section.comparador {
 }
 @media (max-width: 375px) {
     .video {
-        height: 28vw;
+        height: 70vw;
     }
     .slider-frame {
         height: 40vw;
@@ -416,7 +416,7 @@ section.comparador {
 }
 @media (max-width: 320px) {
     .video {
-        height: 50vw;
+        height: 60vw;
     }
     .slider-frame {
         height: 50vw;
