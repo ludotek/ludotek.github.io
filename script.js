@@ -110,9 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-var imagenes = ["/filminas/chim.png", "/filminas/chim2.png"];
-
-cargarImagenes(imagenes);
+// var imagenes = ["/filminas/chim.png", "/filminas/chim2.png"];
+// cargarImagenes(imagenes); // Eliminado porque la función no existe
 
 
 
@@ -186,8 +185,9 @@ teamMemberPhotos.forEach(photo => {
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.getElementById('hambur');
   const mobileMenu = document.getElementById('mobileMenu');
-
-  hamburger.addEventListener('click', () => {
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
       mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
-  });
+    });
+  }
 });
