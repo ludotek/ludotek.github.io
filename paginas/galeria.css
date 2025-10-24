@@ -1,3 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.modal-open {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100% !important;
+    height: 100vh;
+}
+
 .carta-galeria-titulo {
     text-align: center;
     font-size: 1.15rem;
@@ -62,7 +75,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.92);
     display: none;
@@ -79,10 +92,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 70vh;
     gap: 0.5rem;
 }
+
 .modal-galeria-img-container-buttons {
     display: flex;
     flex-direction: row;
@@ -257,7 +271,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.7);
     display: none;
@@ -384,7 +398,7 @@ h1 {
     font-family: "sourceSansProBold";
 }
 
-h2 {}
+
 
 h3 {
     font-family: "sourceSansProRegular";
@@ -418,13 +432,6 @@ p {
 
 
 
-body {
-    display: block;
-    height: 100vh;
-
-}
-
-
 
 h2 {
     font-family: 'Ludotek';
@@ -432,7 +439,7 @@ h2 {
     color: var(--color-blue);
 }
 
-section.galeria {}
+
 
 section.galeria .row {
     color: var(--color-blue);
@@ -550,9 +557,7 @@ input:not(:checked)+label:hover {
 
 
 
-html {
-    font-family: "sourceSansProLight"
-}
+
 
 section.galeriaNueva {
     min-height: 100vh;
@@ -634,7 +639,6 @@ section.galeriaNueva {
     position: relative;
     top: -3rem;
     opacity: 0;
-
 
     display: flex;
     justify-content: center;
@@ -738,7 +742,6 @@ section.galeriaNueva {
     display: flex;
     opacity: 0;
     z-index: 2000;
-
 
     display: flex;
     justify-content: center;

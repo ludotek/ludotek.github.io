@@ -2,39 +2,61 @@
     padding: 0px;
     margin: 0px;
 }
+
 @font-face {
     font-family: 'ludotek';
     src: url(/tipografias/LUDETEK\ MAYUS.otf) format('truetype');
 }
+
 @font-face {
     font-family: 'sourceSansProLight';
     src: url(/tipografias/SourceSansPro-Light.ttf) format('truetype');
 }
+
 @font-face {
     font-family: 'sourceSansProRegular';
     src: url(/tipografias/SourceSansPro-Regular.ttf) format('truetype');
 }
+
 @font-face {
     font-family: 'sourceSansProBold';
     src: url(/tipografias/SourceSansPro-Bold.ttf) format('truetype');
 }
+
 :root {
     --color-blue: #003973;
     --color-dorado: #C7893E;
+
+
 }
-h1{
+
+
+
+h1 {
     font-family: "sourceSansProBold";
 }
-h2{
+
+h2 {
     font-family: 'ludotek';
     color: var(--color-blue);
     text-align: center;
     line-height: 35px;
 }
+
 /* h3 heredará la fuente general definida en body o en el contenedor */
+h3 {
+    font-family: 'sourceSansProBold';
+    color: var(--color-blue);
+    text-align: center;
+    margin: 10px 0 10px 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
 h4 {
     font-family: "sourceSansProRegular";
 }
+
 p {
     color: #333;
     font-size: 16px;
@@ -67,7 +89,6 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-
 
 section.modelado {
     display: block;
@@ -123,8 +144,8 @@ section.modelado {
     width: 100%;
 }
 
-.container:nth-child(even){
-    flex-direction: row-reverse ;
+.container:nth-child(even) {
+    flex-direction: row-reverse;
 
 }
 
@@ -152,7 +173,7 @@ section.modelado {
     justify-content: center;
 }
 
-.text-container p{
+.text-container p {
     font-family: "sourceSansProRegular";
     text-align: justify;
     align-items: center;
@@ -163,12 +184,13 @@ section.modelado {
 }
 
 .text-container h3 {
-    font-family: 'ludotek';
+    font-family: 'sourceSansProBold';
     color: var(--color-blue);
     text-align: center;
     margin: 10px 0 10px 0;
     font-size: 1.5rem;
     letter-spacing: 1px;
+    font-family: 'sourceSansProBold';
 }
 
 
@@ -176,38 +198,82 @@ section.modelado {
 
 
 
-/* Estilos responsivos */
 
-@media only screen and (max-width: 700px) {
-    spline-viewer {
-        transition: 0.2s;
-        display: flex;
-        width: 100%;
-        margin: 0;
-    }
+
+
+
+
+
+@media (max-width: 1200px) {
     .container {
         flex-direction: column;
-
-    }
-    .container:nth-child(even){
-        flex-direction: column
     }
 
-    .image-container {
-        width: 100%;
-        height: 50%;
-    }
-
+    .image-container,
     .text-container {
         width: 100%;
-        height: 50%;
+        height: auto;
     }
 }
 
-@media only screen and (max-width: 900px) {
-    spline-viewer {
-        display: flex;
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .text-container {
         width: 100%;
-        padding-bottom: 50px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .text-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        flex-direction: column;
+        padding: 0 4px;
+    }
+
+    .image-container,
+    .text-container {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    h2 {
+        font-size: 0.95rem;
+    }
+
+    h3 {
+        font-size: 0.85rem;
     }
 }

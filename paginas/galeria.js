@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.alt = `Imagen ${grupo.id} - 2`;
                     img.className = 'carta-galeria-img';
                     img.tabIndex = 0;
-                    // Evento para abrir modal
-                    img.addEventListener('click', () => openModal(grupoIdx, 1));
+                    // Evento para abrir modal: SIEMPRE inicia con la imagen 1 (índice 0)
+                    img.addEventListener('click', () => openModal(grupoIdx, 0));
                     img.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter' || e.key === ' ') openModal(grupoIdx, 1);
+                        if (e.key === 'Enter' || e.key === ' ') openModal(grupoIdx, 0);
                     });
                     carta.appendChild(img);
                 }
@@ -49,23 +49,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Modal único en el body
             if (!document.getElementById('modalGaleria')) {
-                const modal = document.createElement('div');
-                modal.id = 'modalGaleria';
-                modal.className = 'modal-galeria';
-                modal.style.display = 'none';
-                modal.innerHTML = `
-                  <div class="modal-galeria-img-container">
-                    <button id="modalImgPrev" class="modal-galeria-arrow-img" aria-label="Anterior imagen">&#8592;</button>
-                    <img id="modalGaleriaImg" src="" alt="Imagen ampliada" />
-                    <button id="modalImgNext" class="modal-galeria-arrow-img" aria-label="Siguiente imagen">&#8594;</button>
-                  </div>
-                  <div class="modal-galeria-arrows-container">
-                    <button id="modalGrupoPrev" class="modal-galeria-arrow-grupo" aria-label="Contenedor anterior">&#8678;</button>
-                    <button id="modalGrupoNext" class="modal-galeria-arrow-grupo" aria-label="Contenedor siguiente">&#8680;</button>
-                  </div>
-                  <button id="modalGaleriaClose" class="modal-galeria-close" aria-label="Cerrar">×</button>
-                `;
-                document.body.appendChild(modal);
+                                    const modal = document.createElement('div');
+                                    modal.id = 'modalGaleria';
+                                    modal.className = 'modal-galeria';
+                                    modal.style.display = 'none';
+                                    modal.innerHTML = `
+                                        <div class="modal-galeria-img-container">
+                                            <img id="modalGaleriaImg" src="" alt="Imagen ampliada" />
+                                            <div class="modal-galeria-img-container-buttons">
+                                                <button id="modalImgPrev" class="modal-galeria-arrow-img" aria-label="Anterior imagen">&#8592;</button>
+                                                <button id="modalImgNext" class="modal-galeria-arrow-img" aria-label="Siguiente imagen">&#8594;</button>
+                                            </div>
+                                        </div>
+                                        <div class="modal-galeria-arrows-container">
+                                            <button id="modalGrupoPrev" class="modal-galeria-arrow-grupo" aria-label="Contenedor anterior">&#8678;</button>
+                                            <button id="modalGrupoNext" class="modal-galeria-arrow-grupo" aria-label="Contenedor siguiente">&#8680;</button>
+                                        </div>
+                                        <button id="modalGaleriaClose" class="modal-galeria-close" aria-label="Cerrar">×</button>
+                                    `;
+                                    document.body.appendChild(modal);
             }
 
             // Lógica de navegación y eventos del modal
@@ -82,16 +84,29 @@ document.addEventListener('DOMContentLoaded', () => {
             function renderModal() {
                 const grupo = grupos[currentGrupo];
                 modalImg.src = grupo.imagenes[currentImg];
+                // Asegurar que la X esté siempre visible
+                modal.style.position = 'fixed';
+                modal.style.top = '0';
+                modal.style.left = '0';
+                modal.style.width = '100vw';
+                modal.style.height = '100vh';
+                modal.style.zIndex = '9999';
+                btnClose.style.position = 'fixed';
+                btnClose.style.top = '1.5rem';
+                btnClose.style.right = '1.5rem';
+                btnClose.style.zIndex = '10001';
             }
             function openModal(grupoIdx, imgIdx) {
                 currentGrupo = grupoIdx;
-                currentImg = 0; // Siempre mostrar imagen 1 al abrir
+                currentImg = imgIdx; // Mostrar la imagen clickeada
                 renderModal();
                 modal.style.display = 'flex';
                 modal.focus();
+                document.body.classList.add('modal-open');
             }
             function closeModal() {
                 modal.style.display = 'none';
+                document.body.classList.remove('modal-open');
             }
             function showImgPrev() {
                 const grupo = grupos[currentGrupo];
