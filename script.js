@@ -87,11 +87,20 @@ document.addEventListener('DOMContentLoaded', function () {
     var hamburger = document.getElementById('hambur');
     var mobileMenu = document.getElementById('mobileMenu');
     if (hamburger && mobileMenu) {
-        hamburger.addEventListener('click', function () {
-            var expanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !expanded);
-            mobileMenu.classList.toggle('active');
-        });
+      hamburger.addEventListener('click', function () {
+        var expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        var nextState = !expanded;
+        hamburger.setAttribute('aria-expanded', String(nextState));
+        mobileMenu.classList.toggle('active', nextState);
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+          mobileMenu.classList.remove('active');
+          mobileMenu.style.display = '';
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
     }
 
     // Submenú Fases en móvil
@@ -182,12 +191,3 @@ teamMemberPhotos.forEach(photo => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hambur');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => {
-      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
-    });
-  }
-});
