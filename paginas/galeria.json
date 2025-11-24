@@ -130,7 +130,7 @@
 		"id": 20,
 		"titulo": "Construcción",
 		"imagenes": [
-			"../filminas/ripio_1.pngg",
+			"../filminas/ripio_1.png",
 			"../filminas/ripio_2.png",
 			"../filminas/"
 		]
@@ -189,4 +189,5 @@
 			"../filminas/"
 		]
 	}
+
 ]
