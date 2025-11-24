@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     modal.style.display = 'none';
                                     modal.innerHTML = `
                                         <div class="modal-galeria-img-container">
-                                            <img id="modalGaleriaImg" src="" alt="Imagen ampliada" />
+                                            <img id="modalGaleriaImg" src="" alt="Pronto habrá una imagen aquí, espéralo, será legendario" />
                                             <div class="modal-galeria-img-container-buttons">
                                                 <button id="modalImgPrev" class="modal-galeria-arrow-img" aria-label="Anterior imagen">&#8592;</button>
                                                 <button id="modalImgNext" class="modal-galeria-arrow-img" aria-label="Siguiente imagen">&#8594;</button>
