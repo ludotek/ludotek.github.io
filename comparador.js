@@ -1,7 +1,7 @@
 
 
 
-var imagenes = ["/filminas/chim.png", "/filminas/chim2.png"];
+var imagenes = ["/filminas/chim_1.png", "/filminas/chim_2.png"];
 
 //Imagenes sacadas de este post: 
 //http://www.mountainphotographer.com/same-place-different-season/
